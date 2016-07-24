@@ -1,0 +1,29 @@
+#header {
+    background: #404b52;
+    height: 90px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    top: 18px;
+}
+
+.navbar-nav > .navigation > a {
+    position: relative;
+    height: 90px;
+    top: -19px;
+    line-height: 58px;
+    font: 700 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-brand > img {
+    left: 45px;
+    position: relative;
+}
+
+body {
+	margin-top: 90px;
+}
