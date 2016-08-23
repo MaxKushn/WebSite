@@ -22,6 +22,7 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 
+
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -82,6 +83,7 @@ $headings-color:          inherit !default;
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$icon-font-path: "../../bower_components/components-font-awesome/fonts";
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;

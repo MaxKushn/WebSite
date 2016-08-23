@@ -1,0 +1,16 @@
+.quote-font {
+	font-size: 14px;
+	color: #333333;
+	font-family: 'Lato', sans-serif;
+	&:hover {
+		text-decoration: none;
+		color: #dc6226;
+	}
+}
+
+.quote-author {
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	padding: 6px 0 0;
+    color: #dc6226;
+}

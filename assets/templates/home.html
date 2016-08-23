@@ -1,0 +1,190 @@
+<div class="section-0 container-fluid">
+	<div class="gallery row">
+		<img ng-repeat="image in images" ng-show="isActive($index)" src="{{image.src}}" class="gallery-images">
+		<div class="slide col-md-4">
+			<div class="slide-title" ng-repeat="image in images" ng-show="isActive($index)">
+				<h2 class="slide-heading slide-btn">
+					<a href="/drupal_52188/?q=node/89">{{image.title}}</a>
+				</h2>
+			</div>
+			<div class="description-font" ng-repeat="image in images" ng-show="isActive($index)">
+				{{image.desc}}
+			</div>
+		</div>
+		<ul class="gallery-nav col-sm-12">
+			<li ng-repeat="image in images" ng-class="{'active':isActive($index)}">
+				<img src="{{image.src}}" alt="{{image.desc}}" title="{{image.title}}" ng-click="showImg($index)" class="notActive">
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="section-1">
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="main-heading">welcome to our company!</h2>
+				</div>
+				<div class="col-sm-12 center">
+					<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+					</p>
+				</div>
+				<div class="col-sm-12 center">
+					<span class="web-btn">
+						<a href="?q=about">Learn more</a>
+					</span>
+				</div>
+				<div class="col-sm-12">
+					<h6 class="section-heading">Our specialists in each service area provide optimum solutions for client's needs!</h6>
+				</div>
+				<div class="col-sm-12 center">
+					<p>
+					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut laboreore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.
+					</p>
+				</div>
+				<div class="col-sm-12 center">
+					<span class="web-btn">
+						<a href="?q=about">View portfolio</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-2">
+	<div ng-parallax pattern="myPattern" speed="[0]" reverse="[true]" class="section-2-1">
+		<div class="container" style="position: relative;">
+			<div class="row parallax-background">
+					<div class="col-sm-3" style="text-align: center; width:20%;">
+						<img class="section-2-img" src="http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/99x99/public/testi-1.jpg?itok=5rYZbRps" width="99" height="99">
+					</div>
+					<div class="col-sm-12" style="width: 80%;">	
+						<a href="" class="quote-font">
+							"Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc. Praesent quis felis eget elit semper pharetra sollicitudin id nibh. Praesent venenatis lectus ornare, porta risus quis, commodo nulla. Nunc adipiscing ipsum lacinia diam pulvinar aliquet. Mauris sit amet venenatis massa. Sed eu venenatis"
+						</a>
+						<div class="quote-author">
+							Steve Brightman, Tornton Industries
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-3">
+	<div class="container">
+		<div class="row padding-fix">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-1.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">Business Consulting</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-2.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">Enterprise Application</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-3.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">New Strategy</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-4.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">It management</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-5.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">Outsourcing</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">	
+				<div class="thumbnail">
+					<img src="http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/icon-service-6.png" alt="">
+					<div class="caption">
+						<h3 class="section-heading-3">Sales & Marketing</h3>
+						<p>Vestibulum quis felis ut enim aliquam iaculis. Nullam pharetra tortor at quam viverra volutpat. Phasellus vel faucibus dolor. Curabitur</p>
+						<p class="web-btn"><a href="">read more</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="main-heading">Strategy is nothing without execution</h2>
+			</div>
+			<div class="col-sm-12 center">
+				<p class="section-4-text">
+					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				</p>
+			</div>
+			<div class="col-xs-12 col-md-4">	
+				<img class="section-4-img" src="http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/page1_img1.jpg" alt="">
+				<div class="caption">
+					<h3 class="list-heading">Questions to ask:</h3>
+					<ul class="ckeck-list">
+						<li>What is your growth strategy?</li>
+						<li>The "unbundled" company : Are you global?</li>
+						<li>How do you imagine your business model for growth and performance?	</li>
+						<li>Which kind of ecosystem would support my development?</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">	
+				<img class="section-4-img" src="http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/page1_img2.jpg" alt="">
+				<div class="caption">
+					<h3 class="list-heading">The company's role:</h3>
+					<ul class="ckeck-list">
+						<li>Analysing your organisation business model</li>
+						<li>Identifying development opportunities</li>
+						<li>Defining your objectives</li>
+						<li>Identifying the key factors for success</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">	
+				<img class="section-4-img" src="http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/page1_img3.jpg" alt="">
+				<div class="caption">
+					<h3 class="list-heading">Our key offers:</h3>
+					<ul class="ckeck-list">
+						<li>Creator of opportunities</li>
+						<li>(CO) - Pilot</li>
+						<li>Talent management</li>
+						<li>Mobility partner</li>
+						<li>Communications expertise</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

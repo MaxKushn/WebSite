@@ -1,0 +1,55 @@
+@font-face {
+   font-family: Fjalla One;
+   src: url(/assets/styles/fonts/FjallaOne-Regular.otf);
+}
+@font-face {
+   font-family: Lato;
+   src: url(/assets/styles/fonts/Lato-Italic.ttf);
+}
+
+.gallery-nav {
+    bottom: -4px;
+    display: block;
+    height: 165px;
+    left: 0;
+    margin: 0 auto;
+    padding: 1em 0 0.8em;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+    background-color: #e8eef2;
+    li {
+        opacity: .8;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        height: 99px;
+        margin: 0 8px;
+        position: relative;
+        width: 380px;
+        transition: all 0.3s ease;
+        &:active {
+            opacity: 1
+        }
+        &:hover {
+            opacity: 1
+        }
+        img {
+            width: 100%
+        }
+    }
+}
+
+.slide {
+    font-size: 16px;
+    line-height: 22px;
+    top: 50%;
+    left: 50%;
+    margin: -350px 0 0 -585px;
+    min-width: 575px;
+    z-index: 99;
+}
+.gallery-images {
+    width: 100%;
+}

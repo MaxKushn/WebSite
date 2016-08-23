@@ -1,0 +1,53 @@
+$small: 768px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (max-width: $small) { @content; }
+  }
+}
+
+.section-2 {
+	height: 410px;
+	margin: 0px auto;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/parallax-1.jpg) 100% fixed no-repeat;
+}
+.section-2-img {
+	border-radius: 100%
+}
+
+.section-2-1 {
+	padding: 65px 0 86px;
+}
+
+.parallax-background {
+	@include respond-to(handhelds) { padding: 0px;}
+	margin-top: 50px;
+	margin-bottom: 50px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 90px 128px 45px;
+    &::before {
+    	display: inline-block;
+	    width: 51px;
+	    height: 43px;
+	    position: absolute;
+	    content: '';
+    	left: 5px;
+    	top: 0;
+    	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-1.png) 0 0 no-repeat;
+	}
+	 &::after {
+    	display: inline-block;
+	    width: 51px;
+	    height: 43px;
+	    position: absolute;
+	    content: '';
+    	right: 10px;
+    	bottom: 0;
+    	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-2.png) 0 0 no-repeat;
+	}
+}
+

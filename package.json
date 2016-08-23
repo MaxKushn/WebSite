@@ -17,6 +17,7 @@
     "critical": "^0.7.3",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-develop-server": "^0.5.2",
     "gulp-filter": "^4.0.0",
