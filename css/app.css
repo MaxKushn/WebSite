@@ -5925,6 +5925,54 @@ body {
   position: relative;
   line-height: 20px; }
 
+.blog {
+  color: #363636;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 20px; }
+  .blog .second-sidebar {
+    color: #363636;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 80px; }
+    .blog .second-sidebar .title {
+      margin-bottom: 15px; }
+    .blog .second-sidebar .total {
+      text-align: center;
+      margin-bottom: 15px; }
+    .blog .second-sidebar .text {
+      float: right; }
+  .blog .sidebar a {
+    color: #363636; }
+    .blog .sidebar a:hover {
+      text-decoration: none;
+      color: #dc6226;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  .blog .blog-content .block-footer {
+    margin: 45px -14px 55px;
+    line-height: 5px; }
+  .blog .blog-content .blog-video {
+    margin: 0 0 25px; }
+  .blog .blog-content .blog-picture {
+    margin: 0 0 25px; }
+  .blog .blog-content .submitted {
+    margin-left: -7px;
+    margin-bottom: 25px; }
+    .blog .blog-content .submitted i {
+      margin-right: 7px;
+      margin-left: 7px; }
+  .blog .blog-content .blog-icons {
+    color: #dc6226; }
+    .blog .blog-content .blog-icons a {
+      color: #363636; }
+      .blog .blog-content .blog-icons a:hover {
+        text-decoration: none;
+        color: #dc6226;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+
 .contacts {
   padding: 95px 0 60px; }
   .contacts .main-form {
@@ -5955,6 +6003,10 @@ body {
 @font-face {
   font-family: Lato;
   src: url(/assets/styles/fonts/Lato-Italic.ttf); }
+
+@font-face {
+  font-family: Open Sans;
+  src: url(/assets/styles/fonts/OpenSans-Regular.ttf); }
 
 .gallery-nav {
   bottom: -4px;
@@ -6214,6 +6266,18 @@ body {
   color: #e8eef2;
   text-transform: uppercase; }
 
+.blog-heading {
+  margin-bottom: 18px; }
+  .blog-heading a {
+    color: #404b52;
+    text-transform: uppercase;
+    font: 400 30px/30px 'Fjalla One', sans-serif; }
+    .blog-heading a:hover {
+      color: #dc6226;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+
 .quote-font {
   font-size: 14px;
   color: #333333;
@@ -6228,7 +6292,7 @@ body {
   padding: 6px 0 0;
   color: #dc6226; }
 
-.ckeck-list li {
+.check-list li {
   background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/list-marker.png) 0 8px no-repeat;
   list-style: none;
   margin: 0;

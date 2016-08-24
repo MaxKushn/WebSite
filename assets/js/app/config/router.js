@@ -17,5 +17,10 @@ module.exports = function(module) {
 				templateUrl: '/assets/templates/contacts.html',
 				controller: 'ContactPageController',
 			})
+			.state('blog', {
+				url: '/blog',
+				templateUrl: '/assets/templates/blog.html',
+				controller: 'BlogPageController',
+			})
 		}])
 };
