@@ -20,12 +20,10 @@ module.exports = function(module) {
 			.state('blog', {
 				url: '/blog',
 				templateUrl: '/assets/templates/blog.html',
-				controller: 'BlogPageController',
 			})
 			.state('blog-2', {
 				url: '/blog-2',
 				templateUrl: '/assets/templates/blog-2.html',
-				controller: 'BlogPageController',
 			})
 			.state('sign-in', {
 				url: '/sign-in',

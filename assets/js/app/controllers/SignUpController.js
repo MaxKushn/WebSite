@@ -1,22 +1,24 @@
 module.exports = function(module) {
 	'use strict';
-	//
-	// @ndoc controller
-	// @name webApp.controller:SignUpController
-	//
-	// @description controller for sing-up page.
-	//
+	/**
+	 * @ndoc controller
+	 * @name webApp.controller:SignUpController
+	 *
+	 * @description
+	 * controller for sing-up page.
+	 */
 	module
 	.controller('SignUpController', ['$scope', '$interval', 'SignUpServices', 'ngNotify',
     function($scope, $interval, SignUpServices, ngNotify) {
-			//
-			// @ndoc method
-			// @name displayNotifyReg
-			//
-			// @methodOf webApp.controller: SignUpController
-			//
-			// @description this method infrom user that his action were successfull
-			//
+			/**
+			 * @ndoc method
+			 * @name displayNotifyReg
+			 *
+			 * @methodOf webApp.controller: SignUpController
+			 *
+			 * @description
+			 * this method infrom user that his action were successfull
+			 */
 			$scope.displayNotifyReg = function(notify) {
 							switch(notify) {
 								case 'success':
@@ -32,14 +34,15 @@ module.exports = function(module) {
 								break;
 							}
 			};
-			//
-			// @ndoc method
-			// @name CheckTheRegForm
-			//
-			// @methodOf webApp.controller: SignUpController
-			//
-			// @description this method check the response from the server
-			//
+			/**
+			 * @ndoc method
+			 * @name CheckTheRegForm
+			 *
+			 * @methodOf webApp.controller: SignUpController
+			 *
+			 * @description
+			 * this method check the response from the server
+			 */
 			$scope.CheckTheRegForm = function() {
 				SignUpServices.sendCode($scope.joinData)
 				.then(function(response) {
