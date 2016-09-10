@@ -1,6 +1,23 @@
+$small: 767px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (max-width: $small) { @content; }
+  }
+}
+
 #header {
     background: #404b52;
     height: 90px;
+        .active {
+        color: #fff;
+        background-color: #dc6226;
+    }
+}
+
+#main-navbar {
+    margin-top: 13px;
+    border: none;
 }
 
 .navbar-default {
@@ -11,15 +28,21 @@
 }
 
 .navbar-nav > .navigation > a {
+    @include respond-to(handhelds) { 
+        height: 50px;
+        background-color: #404b52;
+        line-height: 2;
+        top: 0px;
+    }
     position: relative;
     height: 90px;
-    top: -19px;
+    top: -32px;
     line-height: 58px;
-    font: 700 'Lato', sans-serif;
     text-transform: uppercase;
 }
 
 .navbar-brand > img {
+    @include respond-to(handhelds) { left: 0px;}
     left: 45px;
     position: relative;
 }

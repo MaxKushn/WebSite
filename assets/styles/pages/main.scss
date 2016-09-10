@@ -11,28 +11,27 @@
    font-family: Open Sans;
    src: url(/assets/styles/fonts/OpenSans-Regular.ttf);
 }
+$extra-sm : 600px;
+$small: 768px;
+$middle: 991px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (max-width: $small) { @content; }
+    @media (max-width: $middle) { @content; }
+  }
+  @else if $media == extra {
+    @media (max-width: $extra-sm) {@content;}
+  }
+}
 
 .gallery-nav {
-    bottom: -4px;
-    display: block;
-    height: 165px;
-    left: 0;
-    margin: 0 auto;
     padding: 1em 0 0.8em;
-    right: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 5;
     background-color: #e8eef2;
-    li {
+    div {
         opacity: .8;
-        border-radius: 5px;
         cursor: pointer;
-        display: inline-block;
-        height: 99px;
-        margin: 0 8px;
         position: relative;
-        width: 380px;
         transition: all 0.3s ease;
         &:active {
             opacity: 1
@@ -47,13 +46,15 @@
 }
 
 .slide {
+    @include respond-to(extra) { display: none;}
+    @include respond-to(handhelds) {
+        left: 0px;
+        margin: 0 auto;
+    }
     font-size: 16px;
-    line-height: 22px;
-    top: 50%;
     left: 50%;
     margin: -350px 0 0 -585px;
     min-width: 575px;
-    z-index: 99;
 }
 .gallery-images {
     width: 100%;

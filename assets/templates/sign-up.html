@@ -1,0 +1,66 @@
+<form name="Form.join" ng-submit="sendCode()" class="notFixed" novalidate id="join">
+    <div class="col-md-12 full-form">
+        <h2 class="main-heading">Sign Up</h2>
+        <div class="col-md-6 left-form">
+            <!--FULL NAME-->
+            <div class="form-group">
+                <label class="form-label req-field" for="input-name-join">Full Name</label>
+                <input type="text" name="fullName" full-name ng-disabled="disabledValidationButton" ng-maxlength="255" class="form-control validate" id="input-name-join" ng-model="joinData.name" required>
+                <div class="error-container" ng-show="Form.join.fullName.$dirty && Form.join.fullName.$invalid" role="alert">
+                    <small class="error" ng-show="Form.join.fullName.$error.required">This field is required</small>
+                    <small class="error" ng-show="!Form.join.fullName.$error.required && Form.join.fullName.$error.fullname">Please enter full name</small>
+                    <small class="error" ng-show="!Form.join.fullName.$error.fullname && Form.join.fullName.$error.maxlength">This field maximum length is 255 chars</small>
+                </div>
+            </div>
+
+            <!--EMAIL-->
+            <div class="form-group">
+                <label class="form-label req-field" for="input-email-join">Email address</label>
+                <input type="email" name="email" ng-disabled="disabledValidationButton" ng-maxlength="255" class="form-control validate" id="input-email-join" ng-model="joinData.email" required>
+                <div class="error-container" ng-show="Form.join.email.$dirty && Form.join.email.$invalid" role="alert">
+                    <small class="error" ng-show="Form.join.email.$error.required">This field is required</small>
+                    <small class="error" ng-show="Form.join.email.$error.email">Enter a valid email</small>
+                    <small class="error" ng-show="!Form.join.email.$error.email && Form.join.email.$error.maxlength">This field maximum length is 255 chars</small>
+                </div>
+            </div>
+            <div class="clearfix">
+                <!--NEXT BUTTON-->
+                <button type="submit" ng-click="CheckTheRegForm()" class="btn btn-square pull-right" ng-disabled="Form.join.$invalid || disabledValidationButton">Validate Your Email</button>
+            </div>
+            <!--CODE-->
+            <div class="form-group">
+                <label class="form-label req-field" for="input-code-join">Enter your code</label>
+                <input type="text" name="code" ng-disabled="!disabledValidationButton" ng-maxlength="5" ng-minlength="5" class="form-control validate" id="input-code-join" ng-model="joinData.code">
+                <div class="error-container" ng-show="Form.join.code.$dirty && Form.join.code.$invalid" role="alert">
+                    <small class="error" ng-show="Form.join.code.$error.minlength">This field minimum length is 5 chars</small>
+                    <small class="error" ng-show="Form.join.code.$error.maxlength">This field maximum length is 5 chars</small>
+                </div>
+            </div>
+            <div class="clearfix">
+                <!--NEXT BUTTON-->
+                <button type="submit" ng-click="CheckTheRegForm()" class="btn btn-square pull-right" ng-disabled="Form.join.code.$invalid || joinData.code.length == 0 || !disabledValidationButton">Sign Up</button>
+            </div>
+            <div class="alert alert-danger" style="margin-top:15px;" ng-if="message.error">
+                {{message.error}}
+            </div>
+            <div class="alert alert-success" style="margin-top:15px;" ng-if="message.success">
+                {{message.success}}
+            </div>
+            <hr class="divider">
+            <div class="have-account">
+              <span class="pull-left">Already have an account?</span>
+              <a href="" ui-sref="sign-in" class="pull-right">Login</a>
+            </div>
+        </div>
+        <div class="col-md-6 help">
+            <p>
+                To sign up simply fill in your details and click the button to vaildate email. We will send  an email with a validation code unique to you. <br>
+                Enter that code in the box below and click 'Sign Up'.
+            </p>
+            <p>
+                If you do not receive a vaildation code email, please check your spam folder. If you have still not received an email <a href="" ui-sref="contacts" class="">contact</a> us for assistance.
+            </p>
+        </div>
+    </div>
+</form>
+<div ng-include="'assets/templates/components/main-footer.html'"></div>

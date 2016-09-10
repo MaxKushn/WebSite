@@ -3,12 +3,19 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     line-height: 20px;
+    .pager-num {
+    	margin: 20px 0;
+    }
+    .Lorem {
+    	margin-bottom: 50px;
+    }
 	.second-sidebar {
 		color: #363636;
 	    font-family: 'Lato', sans-serif;
 	    font-size: 16px;
 	    line-height: 20px;
 		margin-top: 80px;
+		margin-top: 70px;
 		.title {
 			margin-bottom: 15px;
 		}
@@ -32,9 +39,11 @@
 		}
 	}
 	.blog-content {
-		.block-footer {
-			margin: 45px -14px 55px;
-			line-height: 5px;
+		.web-btn a {
+			margin-top: 10px;
+		}
+		.description {
+			margin-bottom: 30px;
 		}
 		.blog-video {
 			margin: 0 0 25px;

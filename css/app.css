@@ -5820,6 +5820,13 @@ button.close {
 #header {
   background: #404b52;
   height: 90px; }
+  #header .active {
+    color: #fff;
+    background-color: #dc6226; }
+
+#main-navbar {
+  margin-top: 13px;
+  border: none; }
 
 .navbar-default {
   background-color: transparent;
@@ -5830,17 +5837,42 @@ button.close {
 .navbar-nav > .navigation > a {
   position: relative;
   height: 90px;
-  top: -19px;
+  top: -32px;
   line-height: 58px;
-  font: 700 'Lato', sans-serif;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .navbar-nav > .navigation > a {
+      height: 50px;
+      background-color: #404b52;
+      line-height: 2;
+      top: 0px; } }
 
 .navbar-brand > img {
   left: 45px;
   position: relative; }
+  @media (max-width: 767px) {
+    .navbar-brand > img {
+      left: 0px; } }
 
 body {
   margin-top: 90px; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px; }
 
 .companies {
   padding: 31px 0 24px;
@@ -5911,6 +5943,17 @@ body {
     top: 0;
     background: #5b5b5b; }
 
+.footer-section-3 {
+  padding: 10px 0 25px;
+  color: #e8eef2;
+  background: #3d3d3d;
+  text-align: center; }
+  .footer-section-3 .footer-company {
+    padding-top: 20px; }
+  .footer-section-3 .sitename {
+    text-transform: uppercase;
+    font-weight: 900; }
+
 .page-footer {
   background: #3d3d3d; }
 
@@ -5920,7 +5963,7 @@ body {
   border: 1px solid #dc6226;
   height: 41px;
   font-style: normal;
-  font-size: 12px;
+  font-size: 21px;
   width: 72%;
   position: relative;
   line-height: 20px; }
@@ -5930,12 +5973,17 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 20px; }
+  .blog .pager-num {
+    margin: 20px 0; }
+  .blog .Lorem {
+    margin-bottom: 50px; }
   .blog .second-sidebar {
     color: #363636;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 80px; }
+    margin-top: 80px;
+    margin-top: 70px; }
     .blog .second-sidebar .title {
       margin-bottom: 15px; }
     .blog .second-sidebar .total {
@@ -5950,9 +5998,10 @@ body {
       color: #dc6226;
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-  .blog .blog-content .block-footer {
-    margin: 45px -14px 55px;
-    line-height: 5px; }
+  .blog .blog-content .web-btn a {
+    margin-top: 10px; }
+  .blog .blog-content .description {
+    margin-bottom: 30px; }
   .blog .blog-content .blog-video {
     margin: 0 0 25px; }
   .blog .blog-content .blog-picture {
@@ -6009,49 +6058,181 @@ body {
   src: url(/assets/styles/fonts/OpenSans-Regular.ttf); }
 
 .gallery-nav {
-  bottom: -4px;
-  display: block;
-  height: 165px;
-  left: 0;
-  margin: 0 auto;
   padding: 1em 0 0.8em;
-  right: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 5;
   background-color: #e8eef2; }
-  .gallery-nav li {
+  .gallery-nav div {
     opacity: .8;
-    border-radius: 5px;
     cursor: pointer;
-    display: inline-block;
-    height: 99px;
-    margin: 0 8px;
     position: relative;
-    width: 380px;
     transition: all 0.3s ease; }
-    .gallery-nav li:active {
+    .gallery-nav div:active {
       opacity: 1; }
-    .gallery-nav li:hover {
+    .gallery-nav div:hover {
       opacity: 1; }
-    .gallery-nav li img {
+    .gallery-nav div img {
       width: 100%; }
 
 .slide {
   font-size: 16px;
-  line-height: 22px;
-  top: 50%;
   left: 50%;
   margin: -350px 0 0 -585px;
-  min-width: 575px;
-  z-index: 99; }
+  min-width: 575px; }
+  @media (max-width: 600px) {
+    .slide {
+      display: none; } }
+  @media (max-width: 768px) {
+    .slide {
+      left: 0px;
+      margin: 0 auto; } }
+  @media (max-width: 991px) {
+    .slide {
+      left: 0px;
+      margin: 0 auto; } }
 
 .gallery-images {
   width: 100%; }
 
+@media (max-width: 991px) {
+  .signin-form {
+    padding: 0px !important; } }
+
+.sign-in-page {
+  background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/bg-1.png) center no-repeat;
+  padding: 100px 40px 70px; }
+  .sign-in-page small {
+    font-size: 85%; }
+  .sign-in-page .sign-in-btn:hover {
+    color: #fff !important;
+    background: #363636 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border-color: #363636 !important; }
+  .sign-in-page .validate-err.ng-dirty.ng-invalid {
+    border-color: #D11C26 !important; }
+  .sign-in-page .error-container .error {
+    color: #D11C26 !important;
+    font: 400 18px/22px 'Lato', sans-serif; }
+  .sign-in-page .mail-icon, .sign-in-page .lock-icon {
+    top: 33px !important; }
+  .sign-in-page .signin-content-wrapper,
+  .sign-in-page .forgot-pwd-content-wrapper {
+    margin-top: 40px; }
+  .sign-in-page .signin-form label {
+    font-size: 15px; }
+  .sign-in-page #forgot-header {
+    font-weight: bold;
+    color: #586975;
+    font-size: 28px; }
+  .sign-in-page .forgot-pwd {
+    color: #949494 !important;
+    cursor: pointer;
+    position: relative;
+    top: -9px;
+    text-decoration: none !important;
+    font-size: 20px; }
+  .sign-in-page .login-btn, .sign-in-page .forgot-btn {
+    font-size: 20px;
+    clear: both;
+    float: right; }
+  .sign-in-page .divider {
+    clear: both;
+    margin-top: 95px;
+    border: none;
+    color: #C5C5C5;
+    background-color: #C5C5C5;
+    height: 1px;
+    margin-bottom: 4px; }
+  .sign-in-page .no-account {
+    font-size: 20px; }
+    .sign-in-page .no-account > span {
+      color: #586975;
+      font-weight: bold; }
+    .sign-in-page .no-account > a {
+      text-decoration: none;
+      color: #F38A3C; }
+  .sign-in-page .remember-me {
+    position: absolute;
+    bottom: 36px;
+    left: 18px; }
+    .sign-in-page .remember-me label {
+      font-size: 17px;
+      color: #586975;
+      font-weight: normal; }
+  .sign-in-page .forgot-pwd-content-wrapper p {
+    font-size: 20px; }
+  .sign-in-page .forgot-pwd-content-wrapper label {
+    font-size: 18px; }
+  .sign-in-page .forgot-pwd-content-wrapper .mail-icon, .sign-in-page .forgot-pwd-content-wrapper .lock-icon {
+    top: 40px !important; }
+
+.notFixed .btn:hover {
+  color: #FFF; }
+
+.notFixed .full-form {
+  background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/bg-1.png) center no-repeat; }
+
+.notFixed .left-form {
+  padding-left: 25%; }
+  @media (max-width: 991px) {
+    .notFixed .left-form {
+      padding-left: 15px !important; } }
+
+.notFixed form {
+  overflow: hidden; }
+
+.notFixed .redirecting {
+  margin-top: 80px; }
+
+.notFixed form#join {
+  margin-top: 80px; }
+
+.notFixed .help {
+  margin-top: 25px;
+  border-left: solid 2px #E4E4E4;
+  color: #586975;
+  font-size: 16px;
+  padding-right: 25%; }
+  @media (max-width: 991px) {
+    .notFixed .help {
+      margin-top: 80px !important; } }
+
+.notFixed #join-actions button {
+  padding: 3px 15px; }
+
+.notFixed .error-container .error {
+  color: #D11C26 !important;
+  font: 400 18px/22px 'Lato', sans-serif; }
+
+.notFixed .divider {
+  clear: both;
+  margin-top: 95px;
+  border: none;
+  color: #C5C5C5;
+  background-color: #C5C5C5;
+  height: 1px;
+  margin-bottom: 4px; }
+
+.notFixed .main-heading {
+  padding-top: 130px; }
+
+.notFixed .have-account {
+  font-size: 20px; }
+  .notFixed .have-account > span {
+    color: #586975;
+    font-weight: bold; }
+  .notFixed .have-account > a {
+    text-decoration: none;
+    color: #F38A3C; }
+
 .section-1 {
   background: #fff url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/bg-1.png) center top no-repeat;
   padding: 100px 0 70px; }
+  @media (max-width: 768px) {
+    .section-1 {
+      padding: 20px 0 70px; } }
+  @media (max-width: 991px) {
+    .section-1 {
+      padding: 20px 0 70px; } }
 
 .jumbotron {
   background-color: transparent; }
@@ -6124,7 +6305,7 @@ body {
   -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); }
 
-.web-btn a {
+.web-btn a, button {
   background: #dc6226;
   border: none;
   border-radius: 0;
@@ -6139,7 +6320,7 @@ body {
   text-transform: uppercase;
   position: relative;
   z-index: 2; }
-  .web-btn a:hover {
+  .web-btn a:hover, button:hover {
     background: #363636;
     color: #fff;
     text-decoration: none;
@@ -6149,20 +6330,12 @@ body {
   text-align: left;
   margin-bottom: 5px;
   background: #dc6226;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
   color: #fff;
-  display: inline-block;
+  display: block;
   font: 400 36px/40px 'Fjalla One', sans-serif;
   outline: none;
-  letter-spacing: 1px;
   padding: 31px 10px 25px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 2;
-  width: 100%; }
+  text-transform: uppercase; }
   .slide-btn a:hover {
     background: #363636;
     color: #fff;
@@ -6215,6 +6388,14 @@ body {
     color: #fff;
     text-decoration: none; }
 
+.sign-in-btn {
+  background: #dc6226 !important;
+  border: solid 1px #dc6226 !important;
+  color: #fff !important; }
+  .sign-in-btn:hover {
+    background-color: shade(#dc6226, 15%) !important;
+    border-color: shade(#dc6226, 17%) !important; }
+
 .main-heading {
   color: #404b52;
   letter-spacing: -1px;
@@ -6245,7 +6426,9 @@ body {
 .description-font {
   padding: 12px 15px 15px 25px;
   color: #404b52;
-  background: #fff; }
+  background: #fff;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .slide-heading {
   color: #404b52;
@@ -6302,3 +6485,31 @@ body {
   line-height: 30px;
   padding: 0 0 0 26px;
   margin-left: -38px; }
+
+.ngn {
+  color: #FFF;
+  cursor: default;
+  display: none;
+  font-size: 1.3em;
+  left: 0;
+  opacity: 1;
+  padding: 25px 80px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  user-select: none;
+  z-index: 9999;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+.ngn-success {
+  background-color: #5eb95e; }
+
+.ngn-error {
+  background-color: #9e2521; }
+
+.ngn-bottom {
+  bottom: 0; }

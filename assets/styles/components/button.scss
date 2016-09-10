@@ -1,4 +1,4 @@
-.web-btn a {
+.web-btn a, button {
     background: #dc6226;
     border: none;
     border-radius: 0;
@@ -25,20 +25,12 @@
     text-align: left;
     margin-bottom: 5px;
     background: #dc6226;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
     color: #fff;
-    display: inline-block;
+    display: block;
     font: 400 36px/40px 'Fjalla One', sans-serif;
     outline: none;
-    letter-spacing: 1px;
     padding: 31px 10px 25px 25px;
-    text-decoration: none;
     text-transform: uppercase;
-    position: relative;
-    z-index: 2;
-    width: 100%;
     &:hover {
         background: #363636;
         color: #fff;
@@ -103,5 +95,15 @@
         background: #363636;
         color: #fff;
         text-decoration: none;
+    }
+}
+
+.sign-in-btn {
+    background: #dc6226!important;
+    border: solid 1px #dc6226!important;
+    color: #fff!important;
+    &:hover {
+        background-color: shade(#dc6226,15%)!important;
+        border-color: shade(#dc6226,17%)!important;
     }
 }

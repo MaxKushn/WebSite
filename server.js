@@ -35,6 +35,20 @@ app.use(connectRouter(function (router) {
         indexRedirect(res);
     });
 
+    router.post('/contacts', function (req, res, next) {
+        res.writeHeader(200, {"Content-Type": "text/html"});
+        res.end();
+    });
+
+    router.post('/sign-in', function (req, res, next) {
+        res.writeHeader(200, {"Content-Type": "text/html"});
+        res.end();
+    });
+
+    router.post('/sign-up', function (req, res, next) {
+        res.writeHeader(200, {"Content-Type": "text/html"});
+        res.end();
+    });
 }));
 
 function indexRedirect(res){

@@ -1,0 +1,67 @@
+$middle: 991px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (max-width: $middle) { @content; }
+  }
+}
+
+.notFixed {
+  .btn:hover {
+    color: #FFF;
+  }
+	.full-form {
+		background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/bg-1.png) center no-repeat;
+	}
+	.left-form {
+		padding-left: 25%;
+		@include respond-to(handhelds) { padding-left: 15px!important;}
+	}
+	form{
+    	overflow: hidden
+	}
+	.redirecting {
+	    margin-top: 80px;
+	}
+	form#join {
+	    margin-top: 80px;
+	}
+	.help {
+	    margin-top: 25px;
+	    border-left: solid 2px #E4E4E4;
+	    color:  #586975;
+        font-size: 16px;
+        padding-right: 25%;
+        @include respond-to(handhelds) { margin-top: 80px!important;}
+	}
+	#join-actions button {
+		padding: 3px 15px;
+	}
+	.error-container .error {
+	    color: #D11C26!important;
+	    font: 400 18px/22px 'Lato', sans-serif;
+  	}
+  	.divider {
+      clear: both;
+      margin-top: 95px;
+      border: none;
+      color: #C5C5C5;
+      background-color: #C5C5C5;
+      height: 1px;
+      margin-bottom: 4px;
+  	}
+  	.main-heading {
+  		padding-top: 130px;
+  	}
+    .have-account {
+      font-size: 20px;
+        & > span{
+            color:  #586975;
+            font-weight: bold;
+        }
+        & > a {
+            text-decoration: none;
+            color:  #F38A3C;
+        }
+    }
+}

@@ -9,18 +9,18 @@
 			</div>
 			<div class="col-sm-12 main-form">
 				<div class="col-sm-6">
-					<form name="myForm" novalidate ng-submit="addNewUser(newUser)">
+					<form name="myForm" novalidate ng-submit="submitForm()" >
 						<h2 class="main-heading">Contact form</h2>
 						<div class="form-group">
 							<label>Your name<span class="form-required"> *</span><br></label>
-							<input name="userName" type="text" class="form-control" ng-model="newUser.name" ng-message="min" required></input>
+							<input name="userName" type="text" class="form-control" ng-model="formData.name" ng-message="min" required></input>
 							<div ng-show="myForm.userName.$dirty && myForm.userName.$invalid">
 		     					<p class="error" ng-show="myForm.userName.$error.required">You forgot to enter your name.</p>
 		    				</div>
 						</div>
-						<div class="form-group">	
+						<div class="form-group">
 							<label>Your e-mail address<span class="form-required"> *</span><br></label>
-							<input name="userEmail" class="form-control" type="email" ng-model="newUser.email" required></input>
+							<input name="userEmail" class="form-control" type="email" ng-model="formData.email" required></input>
 							<div ng-show="myForm.userEmail.$dirty && myForm.userEmail.$invalid">
 		     					<p class="error" ng-show="myForm.userEmail.$error.required">You forgot to enter your email adress.</p>
 		     					<p class="error" ng-show="myForm.userEmail.$invalid-email">You did not enter your email address correctly.</p>
@@ -28,21 +28,21 @@
 						</div>
 						<div class="form-group">
 							<label>Subject<span class="form-required"> *</span><br></label>
-							<input name="subject" class="form-control" type="text" ng-model="newUser.subject" required></input>
+							<input name="subject" class="form-control" type="text" ng-model="formData.subject" required></input>
 							<div ng-show="myForm.subject.$dirty && myForm.subject.$invalid">
 								<p class="error" ng-show="myForm.subject.$error.required">You forgot to enter your subject.</p>
 							</div>
 						</div>
 						<div class="form-group">
 							<label>Message<span class="form-required"> *</span><br></label>
-							<textarea name="message" style="max-width:100%" rows="5" required ng-model="newUser.message" class="form-control"></textarea>
+							<textarea name="message" style="max-width:100%" rows="5" required ng-model="formData.message" class="form-control"></textarea>
 							<div ng-show="myForm.message.$dirty && myForm.message.$invalid">
 		     					<p class="error" ng-show="myForm.message.$error.required">You forgot to enter your message.</p>
 		    				</div>
 						</div>
 						<div class="form-group">
-							<label class="web-btn">	
-								<a href="" ng-disabled="myForm.$invalid" type="submit">Send message</a>
+							<label class="web-btn">
+								<button class="success" ng-class="theme" ng-click="CheckTheForm()" href="" ng-disabled="myForm.$invalid" type="submit">Send message</button> 
 							</label>
 						</div>
 						<!-- <div class="well">
@@ -68,7 +68,7 @@
 							Glasgow, DC 45 Fr 45.
 						</dt>
 						<dd class="col-sm-6">
-							E-mail: 
+							E-mail:
 							<a href="mailto:mail@demolink.org">mail@demolink.org</a>
 							<br>
 							<span>Telephone:</span>
@@ -83,4 +83,4 @@
 		</div>
 	</div>
 </div>
-<!-- <div ng-include="'assets/templates/components/main-footer.html'"></div> -->
+<div ng-include="'assets/templates/components/main-footer.html'"></div>

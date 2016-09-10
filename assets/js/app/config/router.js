@@ -22,5 +22,20 @@ module.exports = function(module) {
 				templateUrl: '/assets/templates/blog.html',
 				controller: 'BlogPageController',
 			})
+			.state('blog-2', {
+				url: '/blog-2',
+				templateUrl: '/assets/templates/blog-2.html',
+				controller: 'BlogPageController',
+			})
+			.state('sign-in', {
+				url: '/sign-in',
+				templateUrl: '/assets/templates/sign-in.html',
+				controller: 'SignInController',
+			})
+			.state('sign-up', {
+				url: '/sign-up',
+				templateUrl: '/assets/templates/sign-up.html',
+				controller: 'SignUpController',
+			})
 		}])
 };

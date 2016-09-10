@@ -1,0 +1,31 @@
+.ngn {
+		color: #FFF;
+    cursor: default;
+    display: none;
+    font-size: 1.3em;
+    left: 0;
+    opacity: 1;
+    padding: 25px 80px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    user-select: none;
+    z-index: 9999;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ngn-success {
+		background-color: #5eb95e;
+}
+
+.ngn-error {
+    background-color: #9e2521;
+}
+
+.ngn-bottom {
+    bottom: 0;
+}

@@ -1,4 +1,15 @@
+$small: 768px;
+$middle: 991px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media (max-width: $small) { @content; }
+    @media (max-width: $middle) { @content; }
+  }
+}
+
 .section-1 {
+	@include respond-to(handhelds) {padding: 20px 0 70px;}
     background: #fff url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/bg-1.png) center top no-repeat;
     padding: 100px 0 70px;
 }
