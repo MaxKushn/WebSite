@@ -48,7 +48,7 @@ describe('controller: ContactPageController', function() {
     expect(ContactCtrl).toBeDefined();
   }));
 
-  it('check form', function() {
+  it('check contact form', function() {
     var contactResponse = $q.defer();
     spyOn(ContactServices, 'submitForm').and.returnValue(contactResponse.promise);
     $scope.CheckTheForm();
