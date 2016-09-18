@@ -22,7 +22,8 @@ module.exports = function(config) {
       '../bower_components/ng-notify/src/scripts/ng-notify.js',
       '../bower_components/*.js',
       '../assets/js/app/app.min.js',
-      './ContactCtrlTest.js'
+      './ContactCtrlTest.js',
+      './HomeCtrlTest.js'
     ],
 
 

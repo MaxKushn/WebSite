@@ -54,11 +54,11 @@ app.use(connectRouter(function (router) {
 function indexRedirect(res){
     fs.readFile('./index.html', function (err, html) {
         if (err) {
-            throw err; 
-        }       
-        res.writeHeader(200, {"Content-Type": "text/html"});  
-        res.write(html);  
-        res.end();  
+            throw err;
+        }
+        res.writeHeader(200, {"Content-Type": "text/html"});
+        res.write(html);
+        res.end();
     });
 }
 
