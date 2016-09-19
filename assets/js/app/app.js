@@ -10,7 +10,7 @@ module.exports = (function() {
 		.run(['$rootScope',  '$state', function ($rootScope, $state) {
      		$rootScope.$state = $state;
     }]);
-		
+
 	config(webApp);
 	initServices(webApp);
 	initControllers(webApp);
