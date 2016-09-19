@@ -7,8 +7,10 @@ module.exports = function (module) {
      * @restrict ''
      * @scope
      *
+     * @param {String} passwordVerify This parameter compares passwords for verify
+     *
      * @description
-     * description for passValidation directive
+     * This check verify for passwords
      */
     module
     .directive("passwordVerify", function() {

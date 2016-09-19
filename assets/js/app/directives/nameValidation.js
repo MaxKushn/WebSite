@@ -8,7 +8,7 @@ module.exports = function (module) {
      * @scope
      *
      * @description
-     * description for nameValidation directive
+     * This check validation for names
      */
     module
       .directive('fullName', function() {

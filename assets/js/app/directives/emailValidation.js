@@ -8,7 +8,7 @@ module.exports = function (module) {
      * @scope
      *
      * @description
-     * description for emailValidation directive
+     * This check validation for emails
      */
     module
     .directive('validateEmail', function() {
