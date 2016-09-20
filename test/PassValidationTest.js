@@ -1,4 +1,4 @@
-describe('directive: password-verify', function() {
+describe('directive: passValidation', function() {
   var $scope,
       $compile,
       $rootScope,
