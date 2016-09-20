@@ -26,7 +26,8 @@ module.exports = function(config) {
       './HomeCtrlTest.js',
       './SignUpCtrlTest.js',
       './PassValidationTest.js',
-      './EmailValidationTest.js'
+      './EmailValidationTest.js',
+      './NameValidationTest.js'
     ],
 
 
