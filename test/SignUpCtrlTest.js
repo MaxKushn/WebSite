@@ -15,24 +15,6 @@ describe('controller: SignUpController', function() {
 
   beforeEach(angular.mock.module('webApp'));
 
-  // beforeEach(angular.mock.inject(function($httpBackend) {
-  //   backend = $httpBackend;
-  //   // backend.expect('POST', '/contacts').respond(200, '');
-  //   // var formData = {
-  //   //   name: "max",
-  //   //   email: "max_mi_98@mail.ru",
-  //   //   subject: "Hello",
-  //   //   message: "Hello world !"
-  //   // }
-  // }))
-  // beforeEach(angular.mock.inject(function($controller, $rootScope) {
-  //   mockScope = $rootScope.$new();
-  //
-  //   controller = $controller('ContactPageController', {
-  //     $scope : mockScope
-  //   });
-  // }));
-
   beforeEach(inject(function(_$controller_, _$q_, _$rootScope_,_SignUpServices_, _$httpBackend_) {
     $httpBackend = _$httpBackend_;
     $controller = _$controller_;

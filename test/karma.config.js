@@ -24,7 +24,8 @@ module.exports = function(config) {
       '../assets/js/app/app.min.js',
       './ContactCtrlTest.js',
       './HomeCtrlTest.js',
-      './SignUpCtrlTest.js'
+      './SignUpCtrlTest.js',
+      './PassValidationTest.js'
     ],
 
 
