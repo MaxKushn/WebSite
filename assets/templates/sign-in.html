@@ -2,12 +2,12 @@
   <div class="container">
     <section class="maincontent row">
       <div class="row signin-content-wrapper">
-        <form name="LoginForm.login" class="col-sm-4 col-sm-offset-4 signin-form" novalidate ng-submit="submitSignIn()">
+        <form name="LoginForm.login" class="col-sm-4 col-sm-offset-4 signin-form" novalidate ng-submit="sendLogin()">
           <div class="login-form">
             <h2 class="main-heading">Sign in</h2>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control validate-err" id="email" ng-change="validInputs()" placeholder="Enter Email" ng-model="signInData.email" name="email" required>
+                <input validate-email type="email" class="form-control validate-err" id="email" ng-change="validInputs()" placeholder="Enter Email" ng-model="signInData.email" name="email" required>
                 <div class="error-container" ng-show="LoginForm.login.email.$dirty && LoginForm.login.email.$invalid" role="alert">
                     <small class="error" ng-show="LoginForm.login.email.$error.required">This field is required</small>
                     <small class="error" ng-show="LoginForm.login.email.$dirty &amp;&amp; LoginForm.login.email.$error.email">This field must be a valid email address</small>
@@ -15,9 +15,10 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control validate-err" id="password" ng-change="validInputs()" placeholder="Enter Password" ng-model="signInData.password" name="password" required>
+                <input type="password" class="form-control validate-err" id="password" ng-minlength="6" ng-change="validInputs()" placeholder="Enter Password" ng-model="signInData.password" name="password" required>
                 <div class="error-container" ng-show="LoginForm.login.password.$dirty && LoginForm.login.password.$invalid" role="alert">
                     <small class="error" ng-show="LoginForm.login.password.$error.required">This field is required</small>
+                    <small class="error" ng-show="LoginForm.login.password.$error.minlength">This field minimum length is 6 chars</small>
                 </div>
             </div>
             <div class="alert alert-danger alert-dismissible" ng-show="errorMessage">
@@ -29,7 +30,7 @@
               <input type="checkbox" id="remember" name="remember" class="" ng-model="signInData.rememberMe" value="yes">
               <label for="remember">Remember Me</label>
             </div>
-            <a type="submit" ng-disabled="LoginForm.login.$invalid" class="btn sign-in-btn btn-square login-btn">Sign in</a>
+            <a type="submit" ng-disabled="LoginForm.login.$invalid" ng-click="CheckTheLogin()" class="btn sign-in-btn btn-square login-btn">Sign in</a>
             <hr class="divider">
             <div class="no-account">
               <span class="pull-left">No Account?</span>

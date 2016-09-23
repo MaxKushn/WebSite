@@ -23,6 +23,7 @@ module.exports = function(config) {
       '../bower_components/*.js',
       '../assets/js/app/app.min.js',
       './ContactCtrlTest.js',
+      './SignInCtrlTest.js',
       './HomeCtrlTest.js',
       './SignUpCtrlTest.js',
       './PassValidationTest.js',

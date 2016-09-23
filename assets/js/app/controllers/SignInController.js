@@ -8,6 +8,24 @@ module.exports = function(module) {
 	 * controller for sign-in page.
 	 */
 	module
-	.controller('SignInController', ['$scope', '$interval',
-    function($scope, $interval) {
+	.controller('SignInController', ['$scope', '$interval', 'SignInServices',
+    function($scope, $interval, SignInServices) {
+			/**
+			 * @ndoc method
+			 * @name CheckTheLogin
+			 *
+			 * @methodOf webApp.controller: SignInController
+			 *
+			 * @description
+			 * this method check the response from the server
+			 */
+			$scope.CheckTheLogin = function() {
+				SignInServices.sendLogin($scope.loginData)
+				.then(function(response) {
+						''
+				},function(error) {
+						''
+				});
+			}
+
 }])};

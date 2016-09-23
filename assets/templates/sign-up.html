@@ -16,7 +16,7 @@
             <!--EMAIL-->
             <div class="form-group">
                 <label class="form-label req-field" for="input-email-join">Email Address</label>
-                <input type="email" name="email" ng-disabled="disabledValidationButton" ng-maxlength="255" placeholder="Enter your email" class="form-control validate" id="input-email-join" ng-model="joinData.email" required>
+                <input validate-email type="email" name="email" ng-disabled="disabledValidationButton" ng-maxlength="255" placeholder="Enter your email" class="form-control validate" id="input-email-join" ng-model="joinData.email" required>
                 <div class="error-container" ng-show="Form.join.email.$dirty && Form.join.email.$invalid" role="alert">
                     <small class="error" ng-show="Form.join.email.$error.required">This field is required</small>
                     <small class="error" ng-show="Form.join.email.$error.email">Enter a valid email</small>
