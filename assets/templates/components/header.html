@@ -16,10 +16,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="nav navbar-nav navbar-right">
-            <li class="navigation" ui-sref="home"><a ng-class="{active: $state.is('home')}"  href="#home"  class="home"><strong>Home</strong></a></li>
-            <li class="navigation" ui-sref="contacts"><a ng-class="{active: $state.is('contacts')}" href="#contacts" class="contact"><strong>Contact</strong></a></li>
-            <li class="navigation" ui-sref="blog"><a ng-class="{active: $state.is('blog')}" href="#blog" class="blog"><strong>Blog pages</strong></a></li>
-            <li class="navigation" ui-sref="sign-in"><a ng-class="{active: $state.is('sign-in')}" href="#" class="sign-in"><strong>Sign in</strong></a></li>
+            <li class="navigation" ui-sref="home"><a id="home" ng-class="{active: $state.is('home')}"  href="#home"  class="home"><strong>Home</strong></a></li>
+            <li class="navigation" ui-sref="contacts"><a id="contact" ng-class="{active: $state.is('contacts')}" href="#contacts" class="contact"><strong>Contact</strong></a></li>
+            <li class="navigation" ui-sref="blog"><a id="blog" ng-class="{active: $state.is('blog')}" href="#blog" class="blog"><strong>Blog pages</strong></a></li>
+            <li class="navigation" ui-sref="sign-in"><a id="sign-in" ng-class="{active: $state.is('sign-in')}" href="#" class="sign-in"><strong>Sign in</strong></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

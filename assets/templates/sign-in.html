@@ -30,11 +30,11 @@
               <input type="checkbox" id="remember" name="remember" class="" ng-model="signInData.rememberMe" value="yes">
               <label for="remember">Remember Me</label>
             </div>
-            <a type="submit" ng-disabled="LoginForm.login.$invalid" ng-click="CheckTheLogin()" class="btn sign-in-btn btn-square login-btn">Sign in</a>
+            <a id="logButton" type="submit" ng-disabled="LoginForm.login.$invalid" ng-click="CheckTheLogin()" class="btn sign-in-btn btn-square login-btn">Sign in</a>
             <hr class="divider">
             <div class="no-account">
               <span class="pull-left">No Account?</span>
-              <a href="" ui-sref="sign-up" class="pull-right">Sign up now</a>
+              <a id="Sign up now" href="" ui-sref="sign-up" class="pull-right">Sign up now</a>
             </div>
           </div>
         </form>
