@@ -13,34 +13,20 @@ module.exports = function (module) {
      * This check verify for passwords
      */
     module
-    .directive("passwordVerify", function() {
+    .directive("passwordVerify",['$parse', function($parse) {
        return {
           require: "ngModel",
-          scope: {
-            passwordVerify: '='
-          },
-          link: function(scope, element, attrs, ctrl) {
-            scope.$watch(function() {
-                var combined;
-
-                if (scope.passwordVerify || ctrl.$viewValue) {
-                   combined = scope.passwordVerify + '_' + ctrl.$viewValue;
-                }
-                return combined;
-            }, function(value) {
-                if (value) {
-                    ctrl.$parsers.unshift(function(viewValue) {
-                        var origin = scope.passwordVerify;
-                        if (origin !== viewValue) {
-                            ctrl.$setValidity("passwordVerify", false);
-                            return undefined;
-                        } else {
-                            ctrl.$setValidity("passwordVerify", true);
-                            return viewValue;
-                        }
-                    });
-                }
-            });
-         }
+          link: link
        };
-})};
+       function link(scope, elem, attrs, ngModel) {
+         var originalModel = $parse(attrs.passwordVerify),
+             secondModel = $parse(attrs.ngModel);
+         scope.$watch(attrs.ngModel, function (newValue) {
+           ngModel.$setValidity(attrs.name, newValue === originalModel(scope));
+         })
+         scope.$watch(attrs.passwordVerify, function (newValue) {
+           ngModel.$setValidity(attrs.name, newValue === secondModel(scope));
+         });
+       }
+    }]);
+};

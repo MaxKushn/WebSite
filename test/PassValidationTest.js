@@ -27,16 +27,16 @@ describe('directive: passValidation', function() {
   describe('Full scan PassValidation directive', function() {
     it('should indicate invalid when the passwords do not match.', function() {
 
-          form.password.$setViewValue(123);
-          form.confirmPassword.$setViewValue(1234);
+          form.password.$setViewValue('123456');
+          form.confirmPassword.$setViewValue('1234567');
           $scope.$digest();
           expect(form.password.$valid && form.confirmPassword.$valid).toBe(false);
       });
 
       it('should indicate valid when the passwords match.', function() {
 
-          form.password.$setViewValue(123);
-          form.confirmPassword.$setViewValue(123);
+          form.password.$setViewValue('123456');
+          form.confirmPassword.$setViewValue('123456');
           $scope.$digest();
           expect(form.password.$valid && form.confirmPassword.$valid).toBe(true);
       });

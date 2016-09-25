@@ -36,9 +36,9 @@
                 <label class="form-label req-field" for="confirm-password-join">Confirm Password</label>
                 <input type="password" class="form-control validate-err" id="password" placeholder="Confirm Password" ng-minlength="6" password-verify="joinData.password" ng-model="joinData.confirmPassword" name="confirmPassword" required>
                 <div class="error-container" ng-show="Form.join.confirmPassword.$dirty && Form.join.confirmPassword.$invalid" role="alert">
-                    <small class="error" ng-show="Form.join.confirmPassword.$error.required">This field is required</small>
-                    <small class="error" ng-show="Form.join.confirmPassword.$error.passwordVerify">Fields are not equal!</small>
+                    <small class="error" ng-show="Form.join.confirmPassword.$error.confirmPassword">Passwords are not equal!</small><br>    
                     <small class="error" ng-show="Form.join.confirmPassword.$error.minlength">This field minimum length is 6 chars</small>
+                    <small class="error" ng-show="Form.join.confirmPassword.$error.required">This field is required</small><br>
                 </div>
             </div>
             <div class="clearfix">
