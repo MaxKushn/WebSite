@@ -8,8 +8,20 @@ module.exports = function(module) {
 	 * controller for Contact page.
 	 */
 	module
-	.controller('ContactPageController', ['$scope', 'ngNotify', 'ContactServices',
-    function($scope, ngNotify, ContactServices) {
+	.controller('ContactPageController', ContactPageController);
+	ContactPageController.$inject =  ['$scope', 'ngNotify', 'ContactServices'];
+  function ContactPageController($scope, ngNotify, ContactServices) {
+				/**
+				 * @ngdoc property
+				 * @name vm
+				 *
+				 * @description
+				 * vm is an instance of the current controller.
+				 */
+			  var vm = this;
+				vm.displayNotify = displayNotify;
+				vm.submitForm = submitForm;
+				vm.formData = {};
 			  /**
 				 * @ndoc method
 				 * @name displayNotify
@@ -19,7 +31,7 @@ module.exports = function(module) {
 				 * @description
 				 * this method infrom user that his action were successfull
 				 */
-				$scope.displayNotify = function(notify) {
+				 function displayNotify (notify) {
                 switch(notify) {
                 	case 'success':
                         ngNotify.set('You have successfully send the form!', {
@@ -36,21 +48,23 @@ module.exports = function(module) {
         };
 				/**
 				 * @ndoc method
-				 * @name CheckTheForm
+				 * @name submitForm
 				 *
 				 * @methodOf webApp.controller: ContactPageController
 				 *
 				 * @description
 				 * this method check the response from the server
 				 */
-				$scope.CheckTheForm = function() {
-					ContactServices.submitForm($scope.formData)
-					.then(function(response) {
-							$scope.displayNotify('success');
-					},function(error) {
-							$scope.displayNotify('error');
-					});
-				}
-
-
-}])};
+				function submitForm(data) {
+					ContactServices.send(data)
+						.then(function() {
+							$scope.myForm.$setPristine();
+			        $scope.myForm.$setUntouched();
+							$scope.formData = {};
+							vm.displayNotify('success');
+						}, function(error) {
+							vm.displayNotify('error');
+						});
+		};
+	};
+};

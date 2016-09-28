@@ -8,27 +8,28 @@ module.exports = function (module) {
      * service for sign-in page that send request when login is success.
   	 */
     module
-    .factory('SignInServices', ['$http', '$q', function($http, $q){
-
+    .factory('SignInServices', SignInServices);
+      SignInServices.$inject = ['$http', '$q']
+      function SignInServices($http, $q) {
+        var data;
         return {
-            sendLogin: sendLogin
+            send: send
         }
         /**
          * @ndoc method
-         * @name sendCode
+         * @name send
          *
          * @methodOf module.factory: SignInServices
          *
          * @description
          * send request to sign-in
          */
-        function sendLogin(loginData) {
+        function send(data) {
           return $http ({
                 method  : 'POST',
                 url     : '/sign-in',
-                data    : loginData,  // pass in data as strings
+                data    : data,  // pass in data as strings
             })
         };
-
-    }]);
+    };
 };

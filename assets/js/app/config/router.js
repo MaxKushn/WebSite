@@ -1,21 +1,25 @@
 module.exports = function(module) {
-	'use strict';
-	module
-	.config(['$stateProvider', '$urlRouterProvider',
-		function($stateProvider, $urlRouterProvider) {
-			//        DEFAULT VIEW
-			$urlRouterProvider.otherwise('/home');
+  "use strict";
 
-			$stateProvider
+// angular
+module
+.config(config);
+
+function config($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/home');
+  $stateProvider
+    /* HomePage */
 			.state('home', {
 				url: '/home',
 				templateUrl: '/assets/templates/home.html',
 				controller: 'HomePageController',
+				controllerAs: 'vm'
 			})
 			.state('contacts', {
 				url: '/contacts',
 				templateUrl: '/assets/templates/contacts.html',
 				controller: 'ContactPageController',
+				controllerAs: 'vm'
 			})
 			.state('blog', {
 				url: '/blog',
@@ -29,11 +33,13 @@ module.exports = function(module) {
 				url: '/sign-in',
 				templateUrl: '/assets/templates/sign-in.html',
 				controller: 'SignInController',
+				controllerAs: 'vm'
 			})
 			.state('sign-up', {
 				url: '/sign-up',
 				templateUrl: '/assets/templates/sign-up.html',
 				controller: 'SignUpController',
+				controllerAs: 'vm'
 			})
-		}])
+		};
 };

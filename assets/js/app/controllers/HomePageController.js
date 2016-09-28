@@ -8,9 +8,21 @@ module.exports = function(module) {
 	 * controller for main page.
 	 */
 	module
-	.controller('HomePageController', ['$scope', '$interval',
-    function($scope, $interval) {
+	.controller('HomePageController', HomePageController);
+	 HomePageController.$inject = ['$scope', '$interval'];
+    function HomePageController($scope, $interval) {
 		/**
+		 * @ngdoc property
+		 * @name vm
+		 *
+		 * @description
+		 * vm is an instance of the current controller.
+		 */
+		var vm = this;
+
+		vm.showImg = showImg;
+		vm.isActive = isActive;
+	  /**
 		 * @ndoc array
 		 * @name images
 		 *
@@ -19,7 +31,7 @@ module.exports = function(module) {
 		 * @description
 		 * contain images for gallery on the main page.
 		 */
-		$scope.images = [{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-1.jpg?itok=n8rpU1Sd', desc:"We added technology to strategy. You get the multiplier effect", title:"Business works with technology"},
+		vm.images = [{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-1.jpg?itok=n8rpU1Sd', desc:"We added technology to strategy. You get the multiplier effect", title:"Business works with technology"},
 		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-2.jpg?itok=-qk5utWc', desc:"We are the trusted advisor to the world's leading businesses", title:"Professional Consulting Services"},
 		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-3.jpg?itok=N0lvhY6E', desc:"We work with our clients as we do with our colleagues", title:"Broaden your market edge"},
 		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-4.jpg?itok=wzGN91aT', desc:"We develop unparalleled management insights", title:"We are a network of leaders"}];
@@ -30,7 +42,7 @@ module.exports = function(module) {
 		 * @description
 		 * contain first image that will show on the gallery
 		 */
-		$scope._Index = 0;
+		vm._Index = 0;
 		/**
 		 * @ndoc variable
 		 * @name myPattern
@@ -38,7 +50,7 @@ module.exports = function(module) {
 		 * @description
 		 * contain parallax image
 		 */
-		$scope.myPattern = "http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/parallax-1.jpg";
+		vm.myPattern = "http://static.livedemo00.template-help.com/drupal_52188/sites/default/files/parallax-1.jpg";
 		/**
 		 * @ndoc method
 		 * @name showImg
@@ -48,8 +60,8 @@ module.exports = function(module) {
 		 * @description
 		 * show certain image
 		 */
-		$scope.showImg = function(index) {
-			$scope._Index = index;
+		function showImg(index) {
+			vm._Index = index;
 		};
 		/**
 		 * @ndoc method
@@ -61,10 +73,10 @@ module.exports = function(module) {
 		 * switch images every 5 sec.
 		 */
 		$interval(function () {
-			$scope.showImg($scope._Index);
-			$scope._Index = $scope._Index + 1
-			if($scope._Index >= $scope.images.length) {
-				$scope._Index = 0}
+			vm.showImg(vm._Index);
+			vm._Index = vm._Index + 1
+			if(vm._Index >= vm.images.length) {
+				vm._Index = 0}
 			}, 5000)
 		/**
 		 * @ndoc method
@@ -75,7 +87,8 @@ module.exports = function(module) {
 	   * @description
 		 * pick active image
 		 */
-		$scope.isActive = function (index) {
-			return $scope._Index === index;
+		function isActive(index) {
+			return vm._Index === index;
 		};
-}])};
+	}
+};

@@ -8,10 +8,12 @@ module.exports = function (module) {
      * service for sign-up page that send request when form is success.
   	 */
     module
-    .factory('SignUpServices', ['$http', '$q', function($http, $q){
-
+    .factory('SignUpServices', SignUpServices);
+      SignUpServices.$inject = ['$http', '$q']
+      function SignUpServices($http, $q) {
+        var data;
         return {
-            sendCode: sendCode
+            send: send
         }
         /**
          * @ndoc method
@@ -22,13 +24,12 @@ module.exports = function (module) {
          * @description
          * send request to sign-up
          */
-        function sendCode(joinData) {
+        function send(data) {
           return $http ({
                 method  : 'POST',
                 url     : '/sign-up',
-                data    : joinData,  // pass in data as strings
+                data    : data,  // pass in data as strings
             })
         };
-
-    }]);
+    };
 };

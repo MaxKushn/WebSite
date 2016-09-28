@@ -9,7 +9,7 @@
 			</div>
 			<div class="col-sm-12 main-form">
 				<div class="col-sm-6">
-					<form name="myForm" novalidate ng-submit="submitForm()" >
+					<form name="myForm" novalidate ng-submit="vm.submitForm(vm.formData)" >
 						<h2 class="main-heading">Contact form</h2>
 						<div class="form-group">
 							<label>Your name<span class="form-required"> *</span><br></label>
@@ -43,15 +43,9 @@
 						</div>
 						<div class="form-group">
 							<label class="web-btn">
-								<button class="success" ng-class="theme" ng-click="CheckTheForm()" href="" ng-disabled="myForm.$invalid" type="submit">Send message</button>
+								<button class="success" ng-class="theme" href="" ng-disabled="myForm.$invalid" type="submit">Send message</button>
 							</label>
 						</div>
-						<!-- <div class="well">
-							Info: {{information}}
-							<div>
-								Valid: {{myForm.$valid}}
-							</div>
-						</div> -->
 					</form>
 				</div>
 				<div class="col-sm-6">

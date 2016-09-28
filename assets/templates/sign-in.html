@@ -2,7 +2,7 @@
   <div class="container">
     <section class="maincontent row">
       <div class="row signin-content-wrapper">
-        <form name="LoginForm.login" class="col-sm-4 col-sm-offset-4 signin-form" novalidate ng-submit="sendLogin()">
+        <form name="LoginForm.login" class="col-sm-4 col-sm-offset-4 signin-form" novalidate ng-submit="vm.checkLogin(vm.loginData)">
           <div class="login-form">
             <h2 class="main-heading">Sign in</h2>
             <div class="form-group">
@@ -30,7 +30,7 @@
               <input type="checkbox" id="remember" name="remember" class="" ng-model="signInData.rememberMe" value="yes">
               <label for="remember">Remember Me</label>
             </div>
-            <a id="logButton" type="submit" ng-disabled="LoginForm.login.$invalid" ng-click="CheckTheLogin()" class="btn sign-in-btn btn-square login-btn">Sign in</a>
+            <button id="logButton" type="submit" ng-disabled="LoginForm.login.$invalid" class="btn sign-in-btn btn-square login-btn">Sign in</button>
             <hr class="divider">
             <div class="no-account">
               <span class="pull-left">No Account?</span>

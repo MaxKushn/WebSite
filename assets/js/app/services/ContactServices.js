@@ -8,27 +8,28 @@ module.exports = function (module) {
      * service for Contact page that send request when form is success.
      */
     module
-    .factory('ContactServices', ['$http', '$q', function($http, $q){
-
+    .factory('ContactServices', ContactServices);
+      ContactServices.$inject = ['$http', '$q']
+      function ContactServices($http, $q) {
+        var data;
         return {
-            submitForm: submitForm
+            send: send
         }
         /**
          * @ndoc method
-         * @name submitForm
+         * @name send
          *
          * @methodOf module.factory: ContactServices
          *
          * @description
          * send request to contacts
          */
-        function submitForm(formData) {
+        function send(data) {
             return $http ({
                 method  : 'POST',
                 url     : '/contacts',
-                data    : formData,  // pass in data as strings
+                data    : data,  // pass in data as strings
             })
         };
-
-    }]);
+    };
 };

@@ -8,24 +8,37 @@ module.exports = function(module) {
 	 * controller for sign-in page.
 	 */
 	module
-	.controller('SignInController', ['$scope', '$interval', 'SignInServices',
-    function($scope, $interval, SignInServices) {
+	.controller('SignInController', SignInController);
+	 SignInController.$inject = ['$scope', '$interval', 'SignInServices', '$state']
+   function SignInController($scope, $interval, SignInServices, $state) {
+		  /**
+	 		 * @ngdoc property
+	 		 * @name vm
+	 		 *
+	 		 * @description
+	 		 * vm is an instance of the current controller.
+ 		 	 */
+	 		var vm = this;
+
+			vm.checkLogin = checkLogin;
+			vm.loginData = {};
 			/**
 			 * @ndoc method
-			 * @name CheckTheLogin
+			 * @name checkLogin
 			 *
 			 * @methodOf webApp.controller: SignInController
 			 *
 			 * @description
 			 * this method check the response from the server
 			 */
-			$scope.CheckTheLogin = function() {
-				SignInServices.sendLogin($scope.loginData)
-				.then(function(response) {
-						''
+			function checkLogin(data) {
+				SignInServices.send(data)
+				.then(function() {
+					$state.go("home");
+					$scope.loginData = {};
 				},function(error) {
-						''
+					''
 				});
 			}
-
-}])};
+	 }
+};

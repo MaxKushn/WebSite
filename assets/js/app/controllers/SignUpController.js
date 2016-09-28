@@ -8,8 +8,20 @@ module.exports = function(module) {
 	 * controller for sing-up page.
 	 */
 	module
-	.controller('SignUpController', ['$scope', '$interval', 'SignUpServices', 'ngNotify',
-    function($scope, $interval, SignUpServices, ngNotify) {
+	.controller('SignUpController', SignUpController);
+		SignUpController.$inject = ['$scope', '$interval', 'SignUpServices', 'ngNotify']
+    function SignUpController($scope, $interval, SignUpServices, ngNotify) {
+			/**
+			 * @ngdoc property
+			 * @name vm
+			 *
+			 * @description
+			 * vm is an instance of the current controller.
+			 */
+			var vm = this;
+			vm.displayNotifyReg = displayNotifyReg;
+			vm.sendRegForm = sendRegForm;
+			vm.joinData = {};
 			/**
 			 * @ndoc method
 			 * @name displayNotifyReg
@@ -19,7 +31,7 @@ module.exports = function(module) {
 			 * @description
 			 * this method infrom user that his action were successfull
 			 */
-			$scope.displayNotifyReg = function(notify) {
+			 function displayNotifyReg(notify) {
 							switch(notify) {
 								case 'success':
 											ngNotify.set('You have successfully registered!', {
@@ -36,19 +48,23 @@ module.exports = function(module) {
 			};
 			/**
 			 * @ndoc method
-			 * @name CheckTheRegForm
+			 * @name sendRegForm
 			 *
 			 * @methodOf webApp.controller: SignUpController
 			 *
 			 * @description
 			 * this method check the response from the server
 			 */
-			$scope.CheckTheRegForm = function() {
-				SignUpServices.sendCode($scope.joinData)
-				.then(function(response) {
-						$scope.displayNotifyReg('success');
-				},function(error) {
-						$scope.displayNotifyReg('error');
+			 function sendRegForm(data) {
+				SignUpServices.send(data)
+				.then(function() {
+					$scope.Form.join.$setPristine();
+					$scope.Form.join.$setUntouched();
+					$scope.joinData = {};
+					vm.displayNotifyReg('success');
+				}, function(error) {
+					vm.displayNotifyReg('error');
 				});
 			}
-}])};
+		}
+};
