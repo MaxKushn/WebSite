@@ -31,10 +31,12 @@ module.exports = function(module) {
 		 * @description
 		 * contain images for gallery on the main page.
 		 */
-		vm.images = [{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-1.jpg?itok=n8rpU1Sd', desc:"We added technology to strategy. You get the multiplier effect", title:"Business works with technology"},
-		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-2.jpg?itok=-qk5utWc', desc:"We are the trusted advisor to the world's leading businesses", title:"Professional Consulting Services"},
-		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-3.jpg?itok=N0lvhY6E', desc:"We work with our clients as we do with our colleagues", title:"Broaden your market edge"},
-		{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-4.jpg?itok=wzGN91aT', desc:"We develop unparalleled management insights", title:"We are a network of leaders"}];
+		vm.images = [
+			{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-1.jpg?itok=n8rpU1Sd', desc:"We added technology to strategy. You get the multiplier effect", title:"Business works with technology"},
+			{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-2.jpg?itok=-qk5utWc', desc:"We are the trusted advisor to the world's leading businesses", title:"Professional Consulting Services"},
+			{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-3.jpg?itok=N0lvhY6E', desc:"We work with our clients as we do with our colleagues", title:"Broaden your market edge"},
+			{src:'http://livedemo00.template-help.com/drupal_52188/sites/default/files/styles/flexslider_full/public/slide-4.jpg?itok=wzGN91aT', desc:"We develop unparalleled management insights", title:"We are a network of leaders"}
+		];
 		/**
 		 * @ndoc variable
 		 * @name _Index

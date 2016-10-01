@@ -8,7 +8,7 @@ module.exports = (function() {
 
 	var webApp = angular.module('webApp', ['ui.router', 'ngNotify'])
 		.run(['$rootScope',  '$state', function ($rootScope, $state) {
-     		$rootScope.$state = $state;
+   		$rootScope.$state = $state;
     }]);
 
 	config(webApp);

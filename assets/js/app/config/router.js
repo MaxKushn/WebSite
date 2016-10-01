@@ -1,14 +1,12 @@
 module.exports = function(module) {
   "use strict";
 
-// angular
 module
 .config(config);
 
 function config($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
   $stateProvider
-    /* HomePage */
 			.state('home', {
 				url: '/home',
 				templateUrl: '/assets/templates/home.html',
