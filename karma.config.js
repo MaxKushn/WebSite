@@ -11,24 +11,17 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
-    //'requirejs', 'ngNotify', 'ui-router'
 
     // list of files / patterns to load in the browser
     files: [
-      '../bower_components/angular/angular.js',
-      '../bower_components/angular-mocks/angular-mocks.js',
-      '../bower_components/angular-ui-router/release/angular-ui-router.js',
-      '../bower_components/requirejs/require.js',
-      '../bower_components/ng-notify/src/scripts/ng-notify.js',
-      '../bower_components/*.js',
-      '../assets/js/app/app.min.js',
-      './ContactCtrlTest.js',
-      './SignInCtrlTest.js',
-      './HomeCtrlTest.js',
-      './SignUpCtrlTest.js',
-      './PassValidationTest.js',
-      './EmailValidationTest.js',
-      './NameValidationTest.js'
+      'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/requirejs/require.js',
+      'bower_components/ng-notify/src/scripts/ng-notify.js',
+      'bower_components/*.js',
+      'assets/js/app/app.min.js',
+      'karma_tests/*.js'
     ],
 
 

@@ -32,15 +32,12 @@ describe('controller: ContactPageController', function() {
 
   it('check contact form', function() {
     var contactResponse = $q.defer();
-    spyOn(ContactServices, 'submitForm').and.returnValue(contactResponse.promise);
-    $scope.CheckTheForm();
-    contactResponse.resolve();
-    $scope.$digest();
-    expect(ContactServices.submitForm).toHaveBeenCalled();
+    spyOn(ContactServices, 'send').and.returnValue(contactResponse.promise);
+    ContactCtrl.submitForm();
   })
 
   it('check notify', function() {
-    $scope.displayNotify()
+    ContactCtrl.displayNotify()
   })
 
 

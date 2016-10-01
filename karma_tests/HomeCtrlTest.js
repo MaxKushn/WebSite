@@ -30,9 +30,9 @@ describe('controller: HomePageController', function() {
   }));
 
   it('show img on the gallery', function() {
-    expect($scope.images.length).toBe(4);
-    $scope.isActive();
-    $scope.showImg();
+    expect(HomeCtrl.images.length).toBe(4);
+    HomeCtrl.isActive();
+    HomeCtrl.showImg();
     $interval();
   })
 

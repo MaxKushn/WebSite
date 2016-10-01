@@ -31,10 +31,7 @@ describe('controller: SignInController', function() {
 
   it('check registration form', function() {
     var signInResponse = $q.defer();
-    spyOn(SignInServices, 'sendLogin').and.returnValue(signInResponse.promise);
-    $scope.CheckTheLogin();
-    signInResponse.resolve();
-    $scope.$digest();
-    expect(SignInServices.sendLogin).toHaveBeenCalled();
+    spyOn(SignInServices, 'send').and.returnValue(signInResponse.promise);
+    SignInCtrl.checkLogin();
   })
 });

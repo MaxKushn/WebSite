@@ -5,5 +5,5 @@ exports.config = {
       // add jasmine spec reporter
       jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
    },
-  specs: ['home-spec.js', 'contact-spec.js', 'navbar-spec.js', 'sign-in-spec.js', 'sign-up-spec.js']
+  specs: ['./end-to-end_tests/*-spec.js']
 };

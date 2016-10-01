@@ -12,6 +12,6 @@ describe('Contact form test', function() {
     element(by.model('formData.subject')).sendKeys('End-to-End');
     element(by.model('formData.message')).sendKeys('This is End-to-End test for contact page more text more message');
     element(by.buttonText('Send message')).click();
-    browser.wait(EC.visibilityOf($('.ngn-success')), 5000);
+    browser.wait(EC.visibilityOf($('.cg-notify-message')), 5000);
   });
 });

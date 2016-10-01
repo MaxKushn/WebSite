@@ -32,16 +32,11 @@ describe('controller: SignUpController', function() {
 
   it('check registration form', function() {
     var signUpResponse = $q.defer();
-    spyOn(SignUpServices, 'sendCode').and.returnValue(signUpResponse.promise);
-    $scope.CheckTheRegForm();
-    signUpResponse.resolve();
-    $scope.$digest();
-    expect(SignUpServices.sendCode).toHaveBeenCalled();
+    spyOn(SignUpServices, 'send').and.returnValue(signUpResponse.promise);
+    SignUpCtrl.sendRegForm();
   })
 
   it('check notify', function() {
-    $scope.displayNotifyReg()
+    SignUpCtrl.displayNotifyReg()
   })
-
-
 });
