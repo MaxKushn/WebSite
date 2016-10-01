@@ -10,7 +10,7 @@ at the terminal in the directory with the project.
 
 2) angular#^1.5.7 which resolved to 1.5.8 and is required by Task Project
 
-After that, you need to run gulp by typing in the console, command 'gulp'
+After that, you need to run gulp by typing in the console, command 'npm run build'
 at the terminal in the directory with the project
 Then, after the full launch gulp, go to the browser link:
 http://localhost:8000/
