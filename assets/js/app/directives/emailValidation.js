@@ -4,7 +4,7 @@ module.exports = function (module) {
    * @ndoc directive
    * @name webApp.directive:emailValidation
    * @require 'NgModel'
-   * @restrict ''
+   * @restrict 'A'
    * @scope
    *
    * @description

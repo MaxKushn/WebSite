@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Responsive HTML5 website template for web development/design agencies",
   "main": "server.js",
+  "scripts": {
+    "e2e": "protractor protractor.config.js",
+    "webdriver:start": "webdriver-manager start",
+    "unit": "karma start karma.config.js"
+  },
   "dependencies": {
     "angular-ui-router": "^0.3.1",
     "body-parser": "^1.15.1",

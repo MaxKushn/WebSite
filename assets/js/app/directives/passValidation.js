@@ -4,7 +4,7 @@ module.exports = function (module) {
    * @ndoc directive
    * @name webApp.directive:passValidation
    * @require 'NgModel'
-   * @restrict ''
+   * @restrict 'A'
    * @scope
    *
    * @param {String} passwordVerify This parameter compares passwords for verify

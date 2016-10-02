@@ -9,8 +9,8 @@ module.exports = function(module) {
 	 */
 	module
 	.controller('SignInController', SignInController);
-	 SignInController.$inject = ['$scope', '$interval', 'SignInServices', '$state']
-   function SignInController($scope, $interval, SignInServices, $state) {
+	 SignInController.$inject = ['$scope', '$interval', 'SignInServices', '$state', 'ngNotify']
+   function SignInController($scope, $interval, SignInServices, $state, ngNotify) {
 	  /**
  		 * @ngdoc property
  		 * @name vm
@@ -19,9 +19,33 @@ module.exports = function(module) {
  		 * vm is an instance of the current controller.
 		 	 */
  		var vm = this;
-
+		vm.displayNotifyReg = displayNotifyReg;
 		vm.checkLogin = checkLogin;
 		vm.loginData = {};
+		/**
+		 * @ndoc method
+		 * @name displayNotifyReg
+		 *
+		 * @methodOf webApp.controller: SignUpController
+		 *
+		 * @description
+		 * this method infrom user that his action were successfull
+		 */
+		 function displayNotifyReg(notify) {
+				switch(notify) {
+					case 'success':
+						ngNotify.set('You have successfully registered!', {
+							type: 'success'
+						});
+					break;
+					case 'error':
+						ngNotify.set('You have not send the form, try again later.', 'error');
+					break;
+					default:
+						ngNotify.set('This is the current default message type.');
+					break;
+				}
+			};
 		/**
 		 * @ndoc method
 		 * @name checkLogin
@@ -37,7 +61,7 @@ module.exports = function(module) {
 				$state.go("home");
 				$scope.loginData = {};
 			},function(error) {
-				''
+				vm.displayNotifyReg('error');
 			});
 		}
 	 }

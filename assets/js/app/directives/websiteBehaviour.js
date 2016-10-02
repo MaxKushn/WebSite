@@ -3,7 +3,7 @@ module.exports = function (module) {
   /**
    * @ndoc directive
    * @name webApp.directive:websiteBehaviour
-   * @restrict A
+   * @restrict 'A'
    * @scope
    *
    * @description
