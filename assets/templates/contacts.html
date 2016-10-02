@@ -15,17 +15,15 @@
 							<label>Your name<span class="form-required"> *</span><br></label>
 							<input full-name name="userName" type="text" class="form-control" ng-model="formData.name" required></input>
 							<div ng-show="myForm.userName.$dirty && myForm.userName.$invalid">
-		     					<p class="error" ng-show="myForm.userName.$error.required">You forgot to enter your name.</p>
-									<p class="error" ng-show="myForm.userName.$error.fullname">Please enter your full name.</p>
-		    				</div>
+								<p class="error" ng-show="myForm.userName.$error.fullname">Please enter your full name.</p>
+		    			</div>
 						</div>
 						<div class="form-group">
 							<label>Your e-mail address<span class="form-required"> *</span><br></label>
 							<input validate-email name="userEmail" class="form-control" type="email" ng-model="formData.email" required></input>
 							<div ng-show="myForm.userEmail.$dirty && myForm.userEmail.$invalid">
-		     					<p class="error" ng-show="myForm.userEmail.$error.required">You forgot to enter your email adress.</p>
-		     					<p class="error" ng-show="myForm.userEmail.$invalid-email">You did not enter your email address correctly.</p>
-		    				</div>
+	     					<p class="error" ng-show="myForm.userEmail.$invalid-email">You did not enter your email address correctly.</p>
+	    				</div>
 						</div>
 						<div class="form-group">
 							<label>Subject<span class="form-required"> *</span><br></label>
@@ -38,8 +36,8 @@
 							<label>Message<span class="form-required"> *</span><br></label>
 							<textarea name="message" style="max-width:100%" rows="5" required ng-model="formData.message" class="form-control"></textarea>
 							<div ng-show="myForm.message.$dirty && myForm.message.$invalid">
-		     					<p class="error" ng-show="myForm.message.$error.required">You forgot to enter your message.</p>
-		    				</div>
+	     					<p class="error" ng-show="myForm.message.$error.required">You forgot to enter your message.</p>
+	    				</div>
 						</div>
 						<div class="form-group">
 							<label class="web-btn">

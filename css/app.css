@@ -5820,16 +5820,49 @@ button.close {
   #header .active {
     color: #fff;
     background-color: #dc6226; }
+  #header .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    top: 18px; }
+    #header .navbar-default .search-block-main-header {
+      overflow: auto;
+      position: relative;
+      padding: 0 8px; }
+      @media (max-width: 767px) {
+        #header .navbar-default .search-block-main-header {
+          padding: 0 13px; } }
+      #header .navbar-default .search-block-main-header a {
+        color: #fff;
+        position: absolute;
+        top: 18%;
+        right: 7%; }
+    #header .navbar-default .wrapper-input-search {
+      top: -3px;
+      margin-left: 3%;
+      position: relative;
+      transition: color .2s ease-in-out; }
+      #header .navbar-default .wrapper-input-search:hover {
+        color: #dc6226; }
+        #header .navbar-default .wrapper-input-search:hover .search-header-input {
+          border: 1px solid #dc6226; }
+        #header .navbar-default .wrapper-input-search:hover .search-icon {
+          color: #dc6226;
+          cursor: pointer; }
+      #header .navbar-default .wrapper-input-search .search-header-input {
+        border-radius: 0px;
+        height: 32px;
+        border-color: #404b52;
+        background-color: #404b52;
+        background-color: #404b52;
+        color: #fff; }
+        @media (max-width: 767px) {
+          #header .navbar-default .wrapper-input-search .search-header-input {
+            width: 132px; } }
 
 #main-navbar {
   margin-top: 13px;
   border: none; }
-
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-  position: relative;
-  top: 18px; }
 
 .navbar-nav > .navigation > a {
   position: relative;
@@ -6481,7 +6514,7 @@ body {
   margin: 0;
   font-weight: 300;
   font-style: italic;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 30px;
   padding: 0 0 0 26px;
   margin-left: -38px; }
