@@ -24,16 +24,13 @@ describe('directive: emailValidation', function() {
     form = $scope.form;
   }));
   describe('Full scan emailValidation directive', function() {
-
       it('should not pass when the email is invalid.', function() {
-
           form.email.$setViewValue('t@t.c');
           $scope.$digest();
           expect(form.email.$valid).toBe(false);
       });
 
       it('should pass when the email is valid.', function() {
-
           form.email.$setViewValue('t@t.co');
           $scope.$digest();
           expect(form.email.$valid).toBe(true);

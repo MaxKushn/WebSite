@@ -24,16 +24,13 @@ describe('directive: nameValidation', function() {
     form = $scope.form;
   }));
   describe('Full scan nameValidation directive', function() {
-
       it('should not pass when the name is invalid.', function() {
-
           form.fullname.$setViewValue('Vasia');
           $scope.$digest();
           expect(form.fullname.$valid).toBe(false);
       });
 
       it('should pass when the name is valid.', function() {
-
           form.fullname.$setViewValue('Vasia Pupkin');
           $scope.$digest();
           expect(form.fullname.$valid).toBe(true);

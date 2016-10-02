@@ -35,6 +35,4 @@ describe('controller: HomePageController', function() {
     HomeCtrl.showImg();
     $interval();
   })
-
-
 });

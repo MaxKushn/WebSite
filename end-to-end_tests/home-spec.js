@@ -1,5 +1,5 @@
 describe('Home page test', function() {
-
+  var title = element.all(by.css(".main-heading"));
   var gallery = element(by.css('.gallery'));
   var galleryView = gallery.all(by.css('.gallery-images'));
   var galleryLinks = element.all(by.id('gallery-img'));
@@ -7,6 +7,12 @@ describe('Home page test', function() {
   beforeEach(function() {
     browser.get('http://localhost:8000/#/home');
     browser.manage().window().setSize(1080, 1920);
+  });
+
+  it('Should have a titles', function() {
+    expect(title.count()).toEqual(2);
+    expect(title.get(0).getText()).toEqual('WELCOME TO OUR COMPANY!');
+    expect(title.get(1).getText()).toEqual('STRATEGY IS NOTHING WITHOUT EXECUTION');
   });
 
   it('should check the url', function() {
@@ -32,5 +38,4 @@ describe('Home page test', function() {
       expect(galleryView.getAttribute('src')).toEqual(galleryLinks.get(3).getAttribute('src'));
     });
   });
-
 });

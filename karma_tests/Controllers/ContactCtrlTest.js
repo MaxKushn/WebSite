@@ -39,6 +39,4 @@ describe('controller: ContactPageController', function() {
   it('check notify', function() {
     ContactCtrl.displayNotify()
   })
-
-
 });

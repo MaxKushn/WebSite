@@ -1,4 +1,6 @@
 describe('navigation test', function() {
+  var linksHeader = element.all(by.css('.navigation li > a'));
+
   it('check all links in the navbar', function() {
     browser.get('http://localhost:8000/#/home');
     element(by.id('sign-in')).click().then(function() {
