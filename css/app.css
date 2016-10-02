@@ -5933,7 +5933,7 @@ body {
     transition: all 0.3s ease;
     content: '';
     display: inline-block;
-    width: 1200px;
+    width: 100%;
     height: 3px;
     right: 0px;
     bottom: -30px;
@@ -6250,6 +6250,9 @@ body {
 
 .section-2-1 {
   padding: 65px 0 86px; }
+  @media (max-width: 768px) {
+    .section-2-1 {
+      padding-top: 25px; } }
 
 .parallax-background {
   margin-top: 50px;

@@ -20,34 +20,34 @@ $small: 768px;
 
 .section-2-1 {
 	padding: 65px 0 86px;
+  @include respond-to(handhelds) { padding-top: 25px;}
 }
 
 .parallax-background {
 	@include respond-to(handhelds) { padding: 0px;}
 	margin-top: 50px;
 	margin-bottom: 50px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 30px 90px 128px 45px;
-    &::before {
-    	display: inline-block;
-	    width: 51px;
-	    height: 43px;
-	    position: absolute;
-	    content: '';
-    	left: 5px;
-    	top: 0;
-    	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-1.png) 0 0 no-repeat;
-	}
-	 &::after {
-    	display: inline-block;
-	    width: 51px;
-	    height: 43px;
-	    position: absolute;
-	    content: '';
-    	right: 10px;
-    	bottom: 0;
-    	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-2.png) 0 0 no-repeat;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 90px 128px 45px;
+  &::before {
+  	display: inline-block;
+    width: 51px;
+    height: 43px;
+    position: absolute;
+    content: '';
+  	left: 5px;
+  	top: 0;
+  	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-1.png) 0 0 no-repeat;
+  }
+  &::after {
+  	display: inline-block;
+    width: 51px;
+    height: 43px;
+    position: absolute;
+    content: '';
+  	right: 10px;
+  	bottom: 0;
+  	background: url(http://static.livedemo00.template-help.com/drupal_52188/sites/all/themes/theme935/images/quote-2.png) 0 0 no-repeat;
 	}
 }
-

@@ -18,28 +18,28 @@ $middle: 991px;
 		@include respond-to(handhelds) { padding-left: 15px!important;}
 	}
 	form{
-    	overflow: hidden
+  	overflow: hidden
 	}
 	.redirecting {
-	    margin-top: 80px;
+    margin-top: 80px;
 	}
 	form#join {
-	    margin-top: 80px;
+    margin-top: 80px;
 	}
 	.help {
-	    margin-top: 25px;
-	    border-left: solid 2px #E4E4E4;
-	    color:  #586975;
-        font-size: 16px;
-        padding-right: 25%;
-        @include respond-to(handhelds) { margin-top: 80px!important;}
+    margin-top: 25px;
+    border-left: solid 2px #E4E4E4;
+    color:  #586975;
+    font-size: 16px;
+    padding-right: 25%;
+    @include respond-to(handhelds) { margin-top: 80px!important;}
 	}
 	#join-actions button {
 		padding: 3px 15px;
 	}
 	.error-container .error {
-	    color: #D11C26!important;
-	    font: 400 18px/22px 'Lato', sans-serif;
+    color: #D11C26!important;
+    font: 400 18px/22px 'Lato', sans-serif;
   	}
   	.divider {
       clear: both;
@@ -55,13 +55,13 @@ $middle: 991px;
   	}
     .have-account {
       font-size: 20px;
-        & > span{
-            color:  #586975;
-            font-weight: bold;
-        }
-        & > a {
-            text-decoration: none;
-            color:  #F38A3C;
-        }
+      & > span{
+        color:  #586975;
+        font-weight: bold;
+      }
+      & > a {
+        text-decoration: none;
+        color:  #F38A3C;
+      }
     }
 }

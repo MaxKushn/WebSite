@@ -15,6 +15,7 @@ module.exports = function (module) {
   module
   .directive("passwordVerify",['$parse', function($parse) {
      return {
+        restrict: 'A',
         require: "ngModel",
         link: link
      };

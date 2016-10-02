@@ -31,11 +31,11 @@ $middle: 991px;
     font: 400 18px/22px 'Lato', sans-serif;
   }
   .mail-icon, .lock-icon {
-      top: 33px!important;
+    top: 33px!important;
   }
   .signin-content-wrapper,
   .forgot-pwd-content-wrapper {
-      margin-top: 40px;
+    margin-top: 40px;
   }
   .signin-form {
     label {
@@ -43,41 +43,41 @@ $middle: 991px;
     }
   }
   #forgot-header {
-      font-weight: bold;
-      color: #586975;
-      font-size: 28px;
+    font-weight: bold;
+    color: #586975;
+    font-size: 28px;
   }
   .forgot-pwd {
-      color: #949494!important;
-      cursor: pointer;
-      position: relative;
-      top: -9px;
-      text-decoration: none!important;
-      font-size: 20px;
+    color: #949494!important;
+    cursor: pointer;
+    position: relative;
+    top: -9px;
+    text-decoration: none!important;
+    font-size: 20px;
   }
   .login-btn, .forgot-btn {
-      font-size: 20px;
-      clear: both;
-      float: right;
+    font-size: 20px;
+    clear: both;
+    float: right;
   }
   .divider {
-      clear: both;
-      margin-top: 95px;
-      border: none;
-      color: #C5C5C5;
-      background-color: #C5C5C5;
-      height: 1px;
-      margin-bottom: 4px;
+    clear: both;
+    margin-top: 95px;
+    border: none;
+    color: #C5C5C5;
+    background-color: #C5C5C5;
+    height: 1px;
+    margin-bottom: 4px;
   }
   .no-account {
     font-size: 20px;
       & > span{
-          color: #586975;
-          font-weight: bold;
+        color: #586975;
+        font-weight: bold;
       }
       & > a {
-          text-decoration: none;
-          color:  #F38A3C;
+        text-decoration: none;
+        color:  #F38A3C;
       }
   }
   .remember-me {
@@ -85,9 +85,9 @@ $middle: 991px;
     bottom: 36px;
     left: 18px;
      label{
-         font-size: 17px;
-         color: #586975;
-         font-weight: normal;
+       font-size: 17px;
+       color: #586975;
+       font-weight: normal;
      }
   }
   .forgot-pwd-content-wrapper {

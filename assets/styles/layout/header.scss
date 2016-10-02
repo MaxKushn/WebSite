@@ -7,44 +7,44 @@ $small: 767px;
 }
 
 #header {
-    background: #404b52;
-    height: 90px;
-        .active {
-        color: #fff;
-        background-color: #dc6226;
-    }
+  background: #404b52;
+  height: 90px;
+    .active {
+    color: #fff;
+    background-color: #dc6226;
+  }
 }
 
 #main-navbar {
-    margin-top: 13px;
-    border: none;
+  margin-top: 13px;
+  border: none;
 }
 
 .navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    position: relative;
-    top: 18px;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+  top: 18px;
 }
 
 .navbar-nav > .navigation > a {
-    @include respond-to(handhelds) {
-        height: 50px;
-        background-color: #404b52;
-        line-height: 2;
-        top: 0px;
-    }
-    position: relative;
-    height: 90px;
-    top: -32px;
-    line-height: 58px;
-    text-transform: uppercase;
+  @include respond-to(handhelds) {
+    height: 50px;
+    background-color: #404b52;
+    line-height: 2;
+    top: 0px;
+  }
+  position: relative;
+  height: 90px;
+  top: -32px;
+  line-height: 58px;
+  text-transform: uppercase;
 }
 
 .navbar-brand > img {
-    @include respond-to(handhelds) { left: 0px;}
-    left: 45px;
-    position: relative;
+  @include respond-to(handhelds) { left: 0px;}
+  left: 45px;
+  position: relative;
 }
 
 body {

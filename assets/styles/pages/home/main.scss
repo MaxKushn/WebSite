@@ -1,15 +1,15 @@
 @font-face {
-   font-family: Fjalla One;
-   src: url(/assets/styles/fonts/FjallaOne-Regular.otf);
+ font-family: Fjalla One;
+ src: url(/assets/styles/fonts/FjallaOne-Regular.otf);
 }
 @font-face {
-   font-family: Lato;
-   src: url(/assets/styles/fonts/Lato-Italic.ttf);
+ font-family: Lato;
+ src: url(/assets/styles/fonts/Lato-Italic.ttf);
 }
 
 @font-face {
-   font-family: Open Sans;
-   src: url(/assets/styles/fonts/OpenSans-Regular.ttf);
+ font-family: Open Sans;
+ src: url(/assets/styles/fonts/OpenSans-Regular.ttf);
 }
 $extra-sm : 600px;
 $small: 768px;
@@ -26,36 +26,36 @@ $middle: 991px;
 }
 
 .gallery-nav {
-    padding: 1em 0 0.8em;
-    background-color: #e8eef2;
-    div {
-        opacity: .8;
-        cursor: pointer;
-        position: relative;
-        transition: all 0.3s ease;
-        &:active {
-            opacity: 1
-        }
-        &:hover {
-            opacity: 1
-        }
-        img {
-            width: 100%
-        }
+  padding: 1em 0 0.8em;
+  background-color: #e8eef2;
+  div {
+    opacity: .8;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    &:active {
+      opacity: 1
     }
+    &:hover {
+      opacity: 1
+    }
+    img {
+      width: 100%
+    }
+  }
 }
 
 .slide {
-    @include respond-to(extra) { display: none;}
-    @include respond-to(handhelds) {
-        left: 0px;
-        margin: 0 auto;
-    }
-    font-size: 16px;
-    left: 50%;
-    margin: -350px 0 0 -585px;
-    min-width: 575px;
+  @include respond-to(extra) { display: none;}
+  @include respond-to(handhelds) {
+    left: 0px;
+    margin: 0 auto;
+  }
+  font-size: 16px;
+  left: 50%;
+  margin: -350px 0 0 -585px;
+  min-width: 575px;
 }
 .gallery-images {
-    width: 100%;
+  width: 100%;
 }

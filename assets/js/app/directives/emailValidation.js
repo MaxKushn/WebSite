@@ -16,7 +16,7 @@ module.exports = function (module) {
 
     return {
       require: 'ngModel',
-      restrict: '',
+      restrict: 'A',
       link: function(scope, elm, attrs, ctrl) {
         // only apply the validator if ngModel is present and Angular has added the email validator
         if (ctrl && ctrl.$validators.email) {
