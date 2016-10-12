@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Responsive HTML5 website template for web development/design agencies",
   "main": "server.js",
-  "scripts": {
-    "e2e": "protractor protractor.config.js",
-    "webdriver:start": "webdriver-manager start",
-    "unit": "karma start karma.config.js"
-  },
   "dependencies": {
     "angular-ui-router": "^0.3.1",
     "body-parser": "^1.15.1",
@@ -46,6 +41,7 @@
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
+    "jasmine": "^2.5.2",
     "main-bower-files": "^2.13.1",
     "ngrok": "^2.2.0",
     "psi": "^2.0.4",
@@ -57,7 +53,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node node_modules/gulp/bin/gulp start",
     "start": "node server.js",
-    "dev": "node node_modules/gulp/bin/gulp start"
+    "dev": "node node_modules/gulp/bin/gulp start",
+    "e2e": "protractor protractor.config.js",
+    "webdriver:start": "webdriver-manager start",
+    "unit": "karma start karma.config.js"
   },
   "repository": {
     "type": "git",

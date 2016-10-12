@@ -14,13 +14,13 @@ http://localhost:8000/
 ## 2.Launch Unit Tests
 
 To start you need at the terminal in the directory with the project, enter the command
-karma **unit**
+karma **npm run unit**
 
 --------------------------
 
 ## 3.Launch E2E Tests
 
-You need to run Selenium Server, typing in the console, command **webdriver:start**
+You need to run Selenium Server, typing in the console, command **npm run webdriver:start**
 at the terminal in the directory with the project.
-Once, in the new terminal window typing in the console, command **e2e**
+Once, in the new terminal window typing in the console, command **npm run e2e**
 at the terminal in the directory with the project.
