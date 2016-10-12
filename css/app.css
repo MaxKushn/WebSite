@@ -5887,21 +5887,17 @@ button.close {
 body {
   margin-top: 90px; }
 
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%; }
 
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px; }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px; }
 
 .companies {
@@ -5980,6 +5976,9 @@ body {
   text-align: center; }
   .footer-section-3 .footer-company {
     padding-top: 20px; }
+    @media (max-width: 767px) {
+      .footer-section-3 .footer-company {
+        padding-top: 10px; } }
   .footer-section-3 .sitename {
     text-transform: uppercase;
     font-weight: 900; }
@@ -5987,7 +5986,11 @@ body {
 .page-footer {
   background: #3d3d3d; }
 
-.sign-up .form-text {
+@media (max-width: 767px) {
+  .footer-sign-up {
+    margin-right: 45px; } }
+
+.footer-sign-up .form-text {
   color: #e8eef2 !important;
   background: #3d3d3d;
   border: 1px solid #dc6226;
@@ -6003,6 +6006,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 20px; }
+  @media (max-width: 767px) {
+    .blog {
+      padding-bottom: 45px; } }
   .blog .pager-num {
     margin: 20px 0; }
   .blog .Lorem {
@@ -6413,7 +6419,7 @@ body {
   height: 41px;
   font-style: normal;
   padding: 10px 11px 11px 13px;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 24px;
   position: absolute; }
   .form-submit-btn:hover {

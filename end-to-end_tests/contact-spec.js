@@ -2,6 +2,10 @@ describe('Contact form test', function() {
   var title = element(by.css(".contacts-map"));
   var columnsNames = element.all(by.css(".contact-column"));
   var EC = protractor.ExpectedConditions;
+  var name = element(by.model('formData.name'));
+  var email = element(by.model('formData.email'));
+  var subject = element(by.model('formData.subject'));
+  var message = element(by.model('formData.message'));
 
   it('should check the url', function() {
     browser.get('http://localhost:8000/#/contacts');
@@ -19,18 +23,23 @@ describe('Contact form test', function() {
   });
 
   it('should check the form', function(){
-    element(by.model('formData.name')).sendKeys('Max Kushnarov');
-    element(by.model('formData.email')).sendKeys('max_mi_98@mail.ru')
-    element(by.model('formData.subject')).sendKeys('End-to-End');
-    element(by.model('formData.message')).sendKeys('This is End-to-End test for contact page more text more message');
-    element(by.buttonText('Send message')).click();
+    name.sendKeys('Max Kushnarov');
+    email.sendKeys('max_mi_98@mail.ru')
+    subject.sendKeys('End-to-End');
+    message.sendKeys('This is End-to-End test for contact page more text more message');
+    element(by.buttonText('Send message')).click().then(function(){
+      expect(name.getAttribute('value')).toBe('');
+      expect(email.getAttribute('value')).toBe('');
+      expect(subject.getAttribute('value')).toBe('');
+      expect(message.getAttribute('value')).toBe('');
+    })
   });
 
   it('should not pass empty form for sending messages', function(){
-    element(by.model('formData.name')).sendKeys('');
-    element(by.model('formData.email')).sendKeys('')
-    element(by.model('formData.subject')).sendKeys('');
-    element(by.model('formData.message')).sendKeys('');
+    name.sendKeys('');
+    email.sendKeys('')
+    subject.sendKeys('');
+    message.sendKeys('');
     expect(element(by.buttonText('Send message')).isEnabled()).toBeFalsy();
   });
 });

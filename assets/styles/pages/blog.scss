@@ -1,4 +1,7 @@
 .blog {
+	@include respond-to(handhelds) {
+		padding-bottom: 45px;
+	};
 	color: #363636;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;

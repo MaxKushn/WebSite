@@ -1,18 +1,14 @@
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
 }
 
@@ -106,7 +102,10 @@ body {
   background: #3d3d3d;
   text-align: center;
   .footer-company {
-  	padding-top: 20px
+  	padding-top: 20px;
+    @include respond-to(handhelds) {
+      padding-top: 10px;
+    };
   }
   .sitename {
   	text-transform: uppercase;
@@ -118,7 +117,10 @@ body {
   background: #3d3d3d;
 }
 
-.sign-up {
+.footer-sign-up {
+  @include respond-to(handhelds) {
+    margin-right: 45px
+  };
 	.form-text {
 		color: #e8eef2 !important;
     background: #3d3d3d;
